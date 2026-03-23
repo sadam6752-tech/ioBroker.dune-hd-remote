@@ -67,6 +67,8 @@ const IR = {
     V_DOWN:      'AC53BF00',
     AUDIO:       'BB44BF00',
     SUBTITLE:    'AB54BF00',
+    REWIND:      'E31CBF00',
+    FORWARD:     'E41BBF00',
     ZOOM:        'FD02BF00',
     EJECT:       'EF10BF00',
     '0': 'F50ABF00',
@@ -146,8 +148,8 @@ function initButtons() {
     wireIR('btn-select', 'SELECT');
 
     // Seek backward / forward (minute-step, like physical remote)
-    wire('btn-seek-bwd', () => cmd('playback_action', { action: 'seek_backward' }));
-    wire('btn-seek-fwd', () => cmd('playback_action', { action: 'seek_forward' }));
+    wireIR('btn-seek-bwd', 'REWIND');
+    wireIR('btn-seek-fwd', 'FORWARD');
 
     // Other (merged into Digits tab)
     wireIR('btn-subtitle', 'SUBTITLE');

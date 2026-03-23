@@ -71,6 +71,7 @@ const IR = {
     FORWARD:     'E41BBF00',
     ZOOM:        'FD02BF00',
     EJECT:       'EF10BF00',
+    REC:         '9F60BF00',
     '0': 'F50ABF00',
     '1': 'F40BBF00',
     '2': 'F30CBF00',
@@ -155,6 +156,7 @@ function initButtons() {
     wireIR('btn-subtitle', 'SUBTITLE');
     wireIR('btn-zoom',     'ZOOM');
     wireIR('btn-eject',    'EJECT');
+    wireIR('btn-rec',      'REC');
     wireIR('btn-return2',  'RETURN');
     wireIR('btn-enter2',   'ENTER');
 }

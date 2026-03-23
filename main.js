@@ -158,11 +158,15 @@ class DuneHdRemote extends utils.Adapter {
         if (!this.player) return;
 
         try {
-            const s = await this.player.getStatus();
+            // Use plain text format — more compatible across firmware versions
+            const s = await this.player.getStatus(false);
             const connected = s.command_status === 'ok';
             await this.setStateAsync('info.connection', { val: connected, ack: true });
 
-            if (!connected) return;
+            if (!connected) {
+                this.log.debug(`Player responded but command_status=${s.command_status}`);
+                return;
+            }
 
             // Map player_state → simplified status
             const stateMap = {
@@ -186,7 +190,7 @@ class DuneHdRemote extends utils.Adapter {
                 await this.setStateAsync('status.currentUrl', { val: s.playback_url, ack: true });
             }
         } catch (err) {
-            this.log.debug(`Status update failed: ${err.message}`);
+            this.log.warn(`Status update failed (${this.config.playerIP}:${this.config.playerPort}): ${err.message}`);
             await this.setStateAsync('info.connection', { val: false, ack: true });
         }
     }

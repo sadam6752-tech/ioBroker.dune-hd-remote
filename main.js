@@ -202,8 +202,32 @@ class DuneHdRemote extends utils.Adapter {
             if (s.playback_caption !== undefined) {
                 await this.setStateAsync('status.caption', { val: s.playback_caption, ack: true });
             }
+            if (s.playback_picture !== undefined) {
+                await this.setStateAsync('status.picture', { val: s.playback_picture, ack: true });
+            }
+            if (s.playback_state !== undefined) {
+                await this.setStateAsync('status.playbackState', { val: s.playback_state, ack: true });
+            }
+            if (s.playback_current_bitrate !== undefined) {
+                await this.setStateAsync('status.bitrate', { val: parseInt(s.playback_current_bitrate) || 0, ack: true });
+            }
+            if (s.playback_is_buffering !== undefined) {
+                await this.setStateAsync('status.isBuffering', { val: s.playback_is_buffering === '1' || s.playback_is_buffering === true, ack: true });
+            }
+            if (s['audio_track.0.lang'] !== undefined) {
+                await this.setStateAsync('status.audioLang', { val: s['audio_track.0.lang'], ack: true });
+            }
+            if (s.playback_video_width !== undefined) {
+                await this.setStateAsync('status.videoWidth', { val: parseInt(s.playback_video_width) || 0, ack: true });
+            }
+            if (s.playback_video_height !== undefined) {
+                await this.setStateAsync('status.videoHeight', { val: parseInt(s.playback_video_height) || 0, ack: true });
+            }
             if (s.product_name !== undefined) {
                 await this.setStateAsync('info.playerModel', { val: s.product_name, ack: true });
+            }
+            if (s.firmware_version !== undefined) {
+                await this.setStateAsync('info.firmwareVersion', { val: s.firmware_version, ack: true });
             }
         } catch (err) {
             this.log.warn(`Status update failed (${this.config.playerIP}:${this.config.playerPort}): ${err.message}`);
@@ -294,10 +318,53 @@ class DuneHdRemote extends utils.Adapter {
             common: { name: 'Caption / Channel Name', type: 'string', role: 'media.title', read: true, write: false, def: '' },
             native: {},
         });
+        await this.extendObjectAsync('status.picture', {
+            type: 'state',
+            common: { name: 'Channel Logo URL', type: 'string', role: 'media.cover', read: true, write: false, def: '' },
+            native: {},
+        });
+        await this.extendObjectAsync('status.playbackState', {
+            type: 'state',
+            common: {
+                name: 'Playback State', type: 'string', role: 'media.state', read: true, write: false, def: '',
+                states: { playing: 'Playing', paused: 'Paused', buffering: 'Buffering' },
+            },
+            native: {},
+        });
+        await this.extendObjectAsync('status.bitrate', {
+            type: 'state',
+            common: { name: 'Current Bitrate', type: 'number', role: 'media.bitrate', read: true, write: false, def: 0, unit: 'bit/s' },
+            native: {},
+        });
+        await this.extendObjectAsync('status.isBuffering', {
+            type: 'state',
+            common: { name: 'Is Buffering', type: 'boolean', role: 'indicator', read: true, write: false, def: false },
+            native: {},
+        });
+        await this.extendObjectAsync('status.audioLang', {
+            type: 'state',
+            common: { name: 'Audio Language', type: 'string', role: 'media.track', read: true, write: false, def: '' },
+            native: {},
+        });
+        await this.extendObjectAsync('status.videoWidth', {
+            type: 'state',
+            common: { name: 'Video Width', type: 'number', role: 'value', read: true, write: false, def: 0, unit: 'px' },
+            native: {},
+        });
+        await this.extendObjectAsync('status.videoHeight', {
+            type: 'state',
+            common: { name: 'Video Height', type: 'number', role: 'value', read: true, write: false, def: 0, unit: 'px' },
+            native: {},
+        });
         // info extras
         await this.extendObjectAsync('info.playerModel', {
             type: 'state',
             common: { name: 'Player Model', type: 'string', role: 'info.hardware', read: true, write: false, def: '' },
+            native: {},
+        });
+        await this.extendObjectAsync('info.firmwareVersion', {
+            type: 'state',
+            common: { name: 'Firmware Version', type: 'string', role: 'info.firmware', read: true, write: false, def: '' },
             native: {},
         });
     }

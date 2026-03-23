@@ -157,6 +157,8 @@ function initButtons() {
     wireIR('btn-angle',     'ANGLE');
     wireIR('btn-repeat',    'REPEAT');
     wireIR('btn-eject',     'EJECT');
+    wireIR('btn-return2',   'RETURN');
+    wireIR('btn-enter2',    'ENTER');
 
     // Volume (removed from Other — now in Main)
 }

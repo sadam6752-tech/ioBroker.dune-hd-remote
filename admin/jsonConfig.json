@@ -71,6 +71,14 @@
       "default": false,
       "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3
     },
+    "pwaBindIp": {
+      "type": "ip",
+      "listenOnAllPorts": true,
+      "label": "Bind IP Address",
+      "help": "IP address to bind the PWA server to. Select 0.0.0.0 for all interfaces.",
+      "disabled": "!data.enablePwa",
+      "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3
+    },
     "pwaPort": {
       "type": "number",
       "label": "PWA Server Port",
@@ -80,14 +88,6 @@
       "help": "Port for the built-in PWA web remote (default: 8765)",
       "disabled": "!data.enablePwa",
       "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
-    },
-    "pwaBindIp": {
-      "type": "ip",
-      "listenOnAllPorts": true,
-      "label": "Bind IP Address",
-      "help": "IP address to bind the PWA server to. Select 0.0.0.0 for all interfaces.",
-      "disabled": "!data.enablePwa",
-      "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3
     },
     "_divider2": {
       "type": "divider",

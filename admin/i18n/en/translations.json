@@ -1,0 +1,12 @@
+{
+  "Player": "Player",
+  "Player Name": "Player Name",
+  "Player IP Address": "Player IP Address",
+  "Player Port": "Player Port",
+  "Standard: 80 (Linux), 11080 (Android/ATV)": "Standard: 80 (Linux), 11080 (Android/ATV)",
+  "Connection Timeout (ms)": "Connection Timeout (ms)",
+  "Status Polling": "Status Polling",
+  "Enable Status Polling": "Enable Status Polling",
+  "Polling Interval (seconds)": "Polling Interval (seconds)",
+  "Test Connection": "Test Connection"
+}

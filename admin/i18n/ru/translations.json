@@ -1,0 +1,12 @@
+{
+  "Player": "Плеер",
+  "Player Name": "Имя плеера",
+  "Player IP Address": "IP-адрес плеера",
+  "Player Port": "Порт",
+  "Standard: 80 (Linux), 11080 (Android/ATV)": "Стандарт: 80 (Linux), 11080 (Android/ATV)",
+  "Connection Timeout (ms)": "Таймаут подключения (мс)",
+  "Status Polling": "Опрос статуса",
+  "Enable Status Polling": "Включить опрос статуса",
+  "Polling Interval (seconds)": "Интервал опроса (секунды)",
+  "Test Connection": "Проверить подключение"
+}

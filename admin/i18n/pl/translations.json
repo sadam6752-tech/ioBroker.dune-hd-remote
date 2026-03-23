@@ -1,0 +1,12 @@
+{
+  "Player": "Odtwarzacz",
+  "Player Name": "Nazwa odtwarzacza",
+  "Player IP Address": "Adres IP odtwarzacza",
+  "Player Port": "Port",
+  "Standard: 80 (Linux), 11080 (Android/ATV)": "Standard: 80 (Linux), 11080 (Android/ATV)",
+  "Connection Timeout (ms)": "Limit czasu połączenia (ms)",
+  "Status Polling": "Odpytywanie statusu",
+  "Enable Status Polling": "Włącz odpytywanie statusu",
+  "Polling Interval (seconds)": "Interwał odpytywania (sekundy)",
+  "Test Connection": "Testuj połączenie"
+}

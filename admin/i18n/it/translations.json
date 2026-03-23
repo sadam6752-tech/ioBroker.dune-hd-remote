@@ -1,0 +1,12 @@
+{
+  "Player": "Lettore",
+  "Player Name": "Nome del lettore",
+  "Player IP Address": "Indirizzo IP del lettore",
+  "Player Port": "Porta",
+  "Standard: 80 (Linux), 11080 (Android/ATV)": "Standard: 80 (Linux), 11080 (Android/ATV)",
+  "Connection Timeout (ms)": "Timeout connessione (ms)",
+  "Status Polling": "Polling stato",
+  "Enable Status Polling": "Abilita polling stato",
+  "Polling Interval (seconds)": "Intervallo polling (secondi)",
+  "Test Connection": "Testa connessione"
+}

@@ -1,0 +1,72 @@
+{
+  "i18n": true,
+  "type": "panel",
+  "items": {
+    "_playerHeader": {
+      "type": "header",
+      "text": "Player",
+      "size": 3
+    },
+    "playerName": {
+      "type": "text",
+      "label": "Player Name",
+      "default": "Dune HD",
+      "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3
+    },
+    "playerIP": {
+      "type": "text",
+      "label": "Player IP Address",
+      "default": "192.168.1.120",
+      "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3
+    },
+    "playerPort": {
+      "type": "number",
+      "label": "Player Port",
+      "default": 80,
+      "min": 1,
+      "max": 65535,
+      "help": "Standard: 80 (Linux), 11080 (Android/ATV)",
+      "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
+    },
+    "connectionTimeout": {
+      "type": "number",
+      "label": "Connection Timeout (ms)",
+      "default": 5000,
+      "min": 1000,
+      "max": 30000,
+      "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
+    },
+    "_pollingHeader": {
+      "type": "header",
+      "text": "Status Polling",
+      "size": 3
+    },
+    "pollingEnabled": {
+      "type": "checkbox",
+      "label": "Enable Status Polling",
+      "default": true,
+      "xs": 12, "sm": 4, "md": 3, "lg": 3, "xl": 3
+    },
+    "pollingInterval": {
+      "type": "number",
+      "label": "Polling Interval (seconds)",
+      "default": 5,
+      "min": 1,
+      "max": 300,
+      "disabled": "!data.pollingEnabled",
+      "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
+    },
+    "_divider": {
+      "type": "divider",
+      "xs": 12
+    },
+    "testConnectionButton": {
+      "type": "sendTo",
+      "label": "Test Connection",
+      "command": "testConnection",
+      "variant": "contained",
+      "color": "primary",
+      "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
+    }
+  }
+}

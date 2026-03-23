@@ -1,0 +1,12 @@
+{
+  "Player": "播放器",
+  "Player Name": "播放器名称",
+  "Player IP Address": "播放器IP地址",
+  "Player Port": "端口",
+  "Standard: 80 (Linux), 11080 (Android/ATV)": "标准: 80 (Linux), 11080 (Android/ATV)",
+  "Connection Timeout (ms)": "连接超时 (毫秒)",
+  "Status Polling": "状态轮询",
+  "Enable Status Polling": "启用状态轮询",
+  "Polling Interval (seconds)": "轮询间隔 (秒)",
+  "Test Connection": "测试连接"
+}

@@ -1,0 +1,12 @@
+{
+  "Player": "Speler",
+  "Player Name": "Spelernaam",
+  "Player IP Address": "IP-adres van speler",
+  "Player Port": "Poort",
+  "Standard: 80 (Linux), 11080 (Android/ATV)": "Standaard: 80 (Linux), 11080 (Android/ATV)",
+  "Connection Timeout (ms)": "Verbindingstime-out (ms)",
+  "Status Polling": "Statuspolling",
+  "Enable Status Polling": "Statuspolling inschakelen",
+  "Polling Interval (seconds)": "Polling-interval (seconden)",
+  "Test Connection": "Verbinding testen"
+}

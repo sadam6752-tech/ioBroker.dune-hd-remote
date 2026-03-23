@@ -1,0 +1,117 @@
+{
+  "common": {
+    "name": "dune-hd-remote",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "Initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Первый выпуск",
+        "fr": "Première version",
+        "it": "Prima versione",
+        "es": "Primera versión",
+        "pl": "Pierwsze wydanie",
+        "pt": "Primeira versão",
+        "nl": "Eerste versie",
+        "uk": "Перший випуск",
+        "zh-cn": "初始版本"
+      }
+    },
+    "titleLang": {
+      "en": "Dune HD Remote",
+      "de": "Dune HD Remote",
+      "ru": "Dune HD Remote",
+      "fr": "Dune HD Remote",
+      "it": "Dune HD Remote",
+      "es": "Dune HD Remote",
+      "pl": "Dune HD Remote",
+      "pt": "Dune HD Remote",
+      "nl": "Dune HD Remote",
+      "uk": "Dune HD Remote",
+      "zh-cn": "Dune HD Remote"
+    },
+    "desc": {
+      "en": "Control Dune HD media players via IP network",
+      "de": "Dune HD Media Player über IP-Netzwerk steuern",
+      "ru": "Управление медиаплеерами Dune HD через IP-сеть",
+      "fr": "Contrôler les lecteurs multimédia Dune HD via le réseau IP",
+      "it": "Controlla i lettori multimediali Dune HD tramite rete IP",
+      "es": "Controlar reproductores multimedia Dune HD a través de red IP",
+      "pl": "Sterowanie odtwarzaczami multimedialnymi Dune HD przez sieć IP",
+      "pt": "Controlar leitores multimédia Dune HD via rede IP",
+      "nl": "Dune HD mediaspelers bedienen via IP-netwerk",
+      "uk": "Керування медіаплеєрами Dune HD через IP-мережу",
+      "zh-cn": "通过IP网络控制Dune HD媒体播放器"
+    },
+    "authors": [
+      "sadam6752-tech <sadam6752@gmail.com>"
+    ],
+    "keywords": [
+      "dune",
+      "hd",
+      "media",
+      "player",
+      "remote",
+      "ip"
+    ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "dune-hd-remote.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.dune-hd-remote/main/admin/dune-hd-remote.png",
+    "readme": "https://github.com/sadam6752-tech/ioBroker.dune-hd-remote/blob/main/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "multimedia",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.6.20"
+      }
+    ],
+    "tier": 3
+  },
+  "native": {
+    "playerName": "Dune HD",
+    "playerIP": "",
+    "playerPort": 80,
+    "connectionTimeout": 5000,
+    "pollingEnabled": true,
+    "pollingInterval": 5
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": { "name": "Information" },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Connection status",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}

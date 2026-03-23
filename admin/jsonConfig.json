@@ -60,6 +60,31 @@
       "type": "divider",
       "xs": 12
     },
+    "_pwaHeader": {
+      "type": "header",
+      "text": "PWA Remote Control",
+      "size": 3
+    },
+    "enablePwa": {
+      "type": "checkbox",
+      "label": "Enable PWA Remote Control",
+      "default": false,
+      "xs": 12, "sm": 6, "md": 4, "lg": 3, "xl": 3
+    },
+    "pwaPort": {
+      "type": "number",
+      "label": "PWA Server Port",
+      "default": 8765,
+      "min": 1024,
+      "max": 65535,
+      "help": "Port for the built-in PWA web remote (default: 8765)",
+      "disabled": "!data.enablePwa",
+      "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
+    },
+    "_divider2": {
+      "type": "divider",
+      "xs": 12
+    },
     "testConnectionButton": {
       "type": "sendTo",
       "label": "Test Connection",

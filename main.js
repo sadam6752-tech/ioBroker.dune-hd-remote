@@ -2,6 +2,7 @@
 
 const utils = require('@iobroker/adapter-core');
 const DunePlayer = require('./lib/dune-player');
+const PwaServer  = require('./lib/pwa-server');
 
 class DuneHdRemote extends utils.Adapter {
     constructor(options = {}) {
@@ -10,6 +11,8 @@ class DuneHdRemote extends utils.Adapter {
         /** @type {DunePlayer|null} */
         this.player = null;
         this._pollingTimer = null;
+        /** @type {PwaServer|null} */
+        this._pwaServer = null;
 
         this.on('ready', this.onReady.bind(this));
         this.on('stateChange', this.onStateChange.bind(this));
@@ -42,6 +45,26 @@ class DuneHdRemote extends utils.Adapter {
             const intervalMs = (this.config.pollingInterval || 5) * 1000;
             this._pollingTimer = this.setInterval(() => this._updateStatus(), intervalMs);
         }
+
+        // PWA server
+        if (this.config.enablePwa) {
+            const pwaPort = this.config.pwaPort || 8765;
+            this._pwaServer = new PwaServer({
+                playerIp:      ip,
+                playerPort:    port,
+                playerTimeout: timeout,
+                pwaPort,
+                log: (level, msg) => this.log[level](msg),
+            });
+            try {
+                await this._pwaServer.start();
+                const pwaUrl = `http://${ip}:${pwaPort}/`;
+                await this.setStateAsync('info.pwaUrl', { val: pwaUrl, ack: true });
+                this.log.info(`PWA remote available at: ${pwaUrl}`);
+            } catch (err) {
+                this.log.error(`Failed to start PWA server: ${err.message}`);
+            }
+        }
     }
 
     async onUnload(callback) {
@@ -49,6 +72,10 @@ class DuneHdRemote extends utils.Adapter {
             if (this._pollingTimer) {
                 this.clearInterval(this._pollingTimer);
                 this._pollingTimer = null;
+            }
+            if (this._pwaServer) {
+                await this._pwaServer.stop();
+                this._pwaServer = null;
             }
             await this.setStateAsync('info.connection', { val: false, ack: true });
         } finally {
@@ -365,6 +392,11 @@ class DuneHdRemote extends utils.Adapter {
         await this.extendObjectAsync('info.firmwareVersion', {
             type: 'state',
             common: { name: 'Firmware Version', type: 'string', role: 'info.firmware', read: true, write: false, def: '' },
+            native: {},
+        });
+        await this.extendObjectAsync('info.pwaUrl', {
+            type: 'state',
+            common: { name: 'PWA Remote URL', type: 'string', role: 'info.ip', read: true, write: false, def: '' },
             native: {},
         });
     }

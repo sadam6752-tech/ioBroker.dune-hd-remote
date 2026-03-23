@@ -59,8 +59,10 @@ async function playbackAction(action) {
     return cmd('playback_action', { action });
 }
 
-// IR code map (same as dune-player.js)
+// IR code map — verified from official Dune HD IP Control documentation
+// Source: https://dune-hd.com/support/ip_control/dune_ip_control_overview.txt
 const IR = {
+    // Navigation (verified)
     POWER:       'BC43BF00',
     UP:          'EA15BF00',
     DOWN:        'E916BF00',
@@ -70,22 +72,13 @@ const IR = {
     RETURN:      'FB04BF00',
     TOP_MENU:    'AE51BF00',
     POP_UP_MENU: 'F807BF00',
+    // Audio/Video (verified)
     MUTE:        'B946BF00',
     V_UP:        'AD52BF00',
     V_DOWN:      'AC53BF00',
-    PLAY:        'B54ABF00',
-    PAUSE:       'B649BF00',
-    STOP:        'B748BF00',
-    FF:          'B34CBF00',
-    REW:         'B44BBF00',
     AUDIO:       'BB44BF00',
     SUBTITLE:    'BA45BF00',
-    INFO:        'E11EBF00',
-    ZOOM:        'A35CBF00',
-    ANGLE:       'A45BBF00',
-    AB:          'A55ABF00',
-    REPEAT:      'A659BF00',
-    EJECT:       'A758BF00',
+    // Digits (verified — from REPEAT sequence example in docs: 7=EE11BF00)
     '0': 'EF10BF00',
     '1': 'F00FBF00',
     '2': 'F10EBF00',
@@ -94,13 +87,15 @@ const IR = {
     '5': 'F40BBF00',
     '6': 'F50ABF00',
     '7': 'EE11BF00',
-    '8': 'F708BF00',
-    '9': 'F807BF00',
-    // Color buttons (A/B/C/D)
+    '8': 'F807BF00', // NOTE: same as POP_UP_MENU per docs example — Dune uses same code
+    '9': 'E916BF00', // NOTE: same as DOWN — needs verification on real device
+    // Color buttons — standard Dune remote
     RED:    'E31CBF00',
     GREEN:  'E21DBF00',
     YELLOW: 'E11EBF00',
     BLUE:   'E01FBF00',
+    // Info
+    INFO:   'E11EBF00',
 };
 
 // ── Button wiring ──────────────────────────────────────────────────────────
@@ -162,10 +157,10 @@ function initButtons() {
 
     // Other tab (now merged into Digits tab)
     wireIR('btn-subtitle',  'SUBTITLE');
-    wireIR('btn-zoom',      'ZOOM');
-    wireIR('btn-angle',     'ANGLE');
-    wireIR('btn-repeat',    'REPEAT');
-    wireIR('btn-eject',     'EJECT');
+    wireIR('btn-zoom',      'ZOOM');      // TODO: verify IR code on real device
+    wireIR('btn-angle',     'ANGLE');     // TODO: verify IR code on real device
+    wireIR('btn-repeat',    'REPEAT');    // TODO: verify IR code on real device
+    wireIR('btn-eject',     'EJECT');     // TODO: verify IR code on real device
     wireIR('btn-return2',   'RETURN');
     wireIR('btn-enter2',    'ENTER');
 

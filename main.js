@@ -158,7 +158,6 @@ class DuneHdRemote extends utils.Adapter {
         if (!this.player) return;
 
         try {
-            // Use plain text format — more compatible across firmware versions
             const s = await this.player.getStatus(false);
             const connected = s.command_status === 'ok';
             await this.setStateAsync('info.connection', { val: connected, ack: true });
@@ -168,7 +167,7 @@ class DuneHdRemote extends utils.Adapter {
                 return;
             }
 
-            // Map player_state → simplified status
+            // player_state → simplified status
             const stateMap = {
                 file_playback:   'playing',
                 dvd_playback:    'playing',
@@ -186,8 +185,25 @@ class DuneHdRemote extends utils.Adapter {
             if (s.playback_duration !== undefined) {
                 await this.setStateAsync('status.duration', { val: parseInt(s.playback_duration) || 0, ack: true });
             }
+            // XML uses playback_volume, text/json uses volume
+            const vol = s.playback_volume !== undefined ? s.playback_volume : s.volume;
+            if (vol !== undefined) {
+                await this.setStateAsync('status.volume', { val: parseInt(vol) || 0, ack: true });
+            }
+            // XML uses playback_mute
+            const mute = s.playback_mute !== undefined ? s.playback_mute : s.mute;
+            if (mute !== undefined) {
+                await this.setStateAsync('status.mute', { val: mute === '1' || mute === true, ack: true });
+            }
             if (s.playback_url !== undefined) {
                 await this.setStateAsync('status.currentUrl', { val: s.playback_url, ack: true });
+            }
+            // Extra info from XML
+            if (s.playback_caption !== undefined) {
+                await this.setStateAsync('status.caption', { val: s.playback_caption, ack: true });
+            }
+            if (s.product_name !== undefined) {
+                await this.setStateAsync('info.playerModel', { val: s.product_name, ack: true });
             }
         } catch (err) {
             this.log.warn(`Status update failed (${this.config.playerIP}:${this.config.playerPort}): ${err.message}`);
@@ -271,6 +287,17 @@ class DuneHdRemote extends utils.Adapter {
         await this.extendObjectAsync('status.currentUrl', {
             type: 'state',
             common: { name: 'Current URL', type: 'string', role: 'media.url', read: true, write: false, def: '' },
+            native: {},
+        });
+        await this.extendObjectAsync('status.caption', {
+            type: 'state',
+            common: { name: 'Caption / Channel Name', type: 'string', role: 'media.title', read: true, write: false, def: '' },
+            native: {},
+        });
+        // info extras
+        await this.extendObjectAsync('info.playerModel', {
+            type: 'state',
+            common: { name: 'Player Model', type: 'string', role: 'info.hardware', read: true, write: false, def: '' },
             native: {},
         });
     }

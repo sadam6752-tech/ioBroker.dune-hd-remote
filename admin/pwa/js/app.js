@@ -50,6 +50,15 @@ async function ir(irCode) {
     return cmd('ir_code', { ir_code: irCode });
 }
 
+// Playback state shortcuts
+async function setSpeed(speed) {
+    return cmd('set_playback_state', { speed });
+}
+
+async function playbackAction(action) {
+    return cmd('playback_action', { action });
+}
+
 // IR code map (same as dune-player.js)
 const IR = {
     POWER:       'BC43BF00',
@@ -122,17 +131,17 @@ function initButtons() {
     wireIR('btn-return',    'RETURN');
     wireIR('btn-topmenu',   'TOP_MENU');
 
-    // Playback row 1
-    wireIR('btn-play',      'PLAY');
-    wireIR('btn-pause',     'PAUSE');
-    wireIR('btn-prev',      'REW');
-    wireIR('btn-next',      'FF');
+    // Playback row 1: Play / Pause / Prev / Next
+    wire('btn-play',  () => setSpeed(256));           // resume at 1x
+    wire('btn-pause', () => setSpeed(0));             // pause
+    wire('btn-prev',  () => playbackAction('prev'));  // previous chapter/track
+    wire('btn-next',  () => playbackAction('next'));  // next chapter/track
 
-    // Playback row 2
-    wireIR('btn-stop',      'STOP');
-    wireIR('btn-slow',      'AB');
-    wireIR('btn-rew',       'REW');
-    wireIR('btn-ff',        'FF');
+    // Playback row 2: Stop / Slow / REW / FF
+    wire('btn-stop',  () => playbackAction('stop'));  // stop playback
+    wire('btn-slow',  () => setSpeed(64));            // slow motion ~0.25x
+    wire('btn-rew',   () => setSpeed(-512));          // rewind 2x
+    wire('btn-ff',    () => setSpeed(512));           // fast forward 2x
 
     // Volume / Mute / Audio (Main tab bottom)
     wire('btn-vol-up',   () => ir(IR.V_UP));

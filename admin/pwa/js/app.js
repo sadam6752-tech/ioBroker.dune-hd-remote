@@ -145,6 +145,10 @@ function initButtons() {
     wireIR('btn-clear',  'CLEAR');
     wireIR('btn-select', 'SELECT');
 
+    // Seek backward / forward (minute-step, like physical remote)
+    wire('btn-seek-bwd', () => cmd('playback_action', { action: 'seek_backward' }));
+    wire('btn-seek-fwd', () => cmd('playback_action', { action: 'seek_forward' }));
+
     // Other (merged into Digits tab)
     wireIR('btn-subtitle', 'SUBTITLE');
     wireIR('btn-zoom',     'ZOOM');

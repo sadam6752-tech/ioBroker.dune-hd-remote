@@ -107,9 +107,9 @@ function wireIR(id, irKey) {
 
 function initButtons() {
     // Main tab — top row
-    wireIR('btn-mute',      'MUTE');
-    wireIR('btn-audio',     'AUDIO');
+    wireIR('btn-info',      'INFO');
     wireIR('btn-power',     'POWER');
+    wireIR('btn-popup',     'POP_UP_MENU');
 
     // D-pad
     wireIR('btn-up',        'UP');
@@ -119,8 +119,6 @@ function initButtons() {
     wireIR('btn-enter',     'ENTER');
 
     // Side buttons
-    wireIR('btn-info',      'INFO');
-    wireIR('btn-popup',     'POP_UP_MENU');
     wireIR('btn-return',    'RETURN');
     wireIR('btn-topmenu',   'TOP_MENU');
 
@@ -136,6 +134,12 @@ function initButtons() {
     wireIR('btn-rew',       'REW');
     wireIR('btn-ff',        'FF');
 
+    // Volume / Mute / Audio (Main tab bottom)
+    wire('btn-vol-up',   () => ir(IR.V_UP));
+    wire('btn-vol-down', () => ir(IR.V_DOWN));
+    wireIR('btn-mute',   'MUTE');
+    wireIR('btn-audio',  'AUDIO');
+
     // Digits tab — color buttons
     wireIR('btn-a',         'RED');
     wireIR('btn-b',         'GREEN');
@@ -147,16 +151,14 @@ function initButtons() {
         wireIR(`btn-${i}`, String(i));
     }
 
-    // Other tab
+    // Other tab (now merged into Digits tab)
     wireIR('btn-subtitle',  'SUBTITLE');
     wireIR('btn-zoom',      'ZOOM');
     wireIR('btn-angle',     'ANGLE');
     wireIR('btn-repeat',    'REPEAT');
     wireIR('btn-eject',     'EJECT');
 
-    // Volume
-    wire('btn-vol-up',   () => ir(IR.V_UP));
-    wire('btn-vol-down', () => ir(IR.V_DOWN));
+    // Volume (removed from Other — now in Main)
 }
 
 // ── Settings ───────────────────────────────────────────────────────────────

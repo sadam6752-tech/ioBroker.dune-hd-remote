@@ -48,19 +48,21 @@ class DuneHdRemote extends utils.Adapter {
 
         // PWA server
         if (this.config.enablePwa) {
-            const pwaPort = this.config.pwaPort || 8765;
+            const pwaPort = this.config.pwaPort  || 8765;
+            const bindIp  = this.config.pwaBindIp || '0.0.0.0';
             this._pwaServer = new PwaServer({
                 playerIp:      ip,
                 playerPort:    port,
                 playerTimeout: timeout,
                 pwaPort,
+                bindIp,
                 log: (level, msg) => this.log[level](msg),
             });
             try {
-                await this._pwaServer.start();
-                const pwaUrl = `http://${ip}:${pwaPort}/`;
+                const displayHost = await this._pwaServer.start();
+                const pwaUrl = `http://${displayHost}:${pwaPort}/`;
                 await this.setStateAsync('info.pwaUrl', { val: pwaUrl, ack: true });
-                this.log.info(`PWA remote available at: ${pwaUrl}`);
+                this.log.info(`PWA remote available at: http://<iobroker-host>:${pwaPort}/`);
             } catch (err) {
                 this.log.error(`Failed to start PWA server: ${err.message}`);
             }

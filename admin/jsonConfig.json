@@ -56,6 +56,16 @@
       "disabled": "!data.pollingEnabled",
       "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
     },
+    "offlinePollingInterval": {
+      "type": "number",
+      "label": "Offline Polling Interval (seconds)",
+      "default": 30,
+      "min": 5,
+      "max": 600,
+      "help": "Polling interval when player is unreachable",
+      "disabled": "!data.pollingEnabled",
+      "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
+    },
     "_divider": {
       "type": "divider",
       "xs": 12

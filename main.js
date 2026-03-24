@@ -189,7 +189,9 @@ class DuneHdRemote extends utils.Adapter {
         if (this._pollingTimer) {
             this.clearTimeout(this._pollingTimer);
         }
-        const interval = this._wasDisconnected ? 30000 : this._pollingIntervalMs;
+        const interval = this._wasDisconnected
+            ? (this.config.offlinePollingInterval || 30) * 1000
+            : this._pollingIntervalMs;
         this._pollingTimer = this.setTimeout(() => this._pollAndReschedule(), interval);
     }
 

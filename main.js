@@ -12,6 +12,7 @@ class DuneHdRemote extends utils.Adapter {
         this.player = null;
         this._pollingTimer = null;
         this._wasDisconnected = false;
+        this._pollingIntervalMs = 5000;
         /** @type {PwaServer|null} */
         this._pwaServer = null;
 
@@ -43,8 +44,8 @@ class DuneHdRemote extends utils.Adapter {
         await this._updateStatus();
 
         if (this.config.pollingEnabled) {
-            const intervalMs = (this.config.pollingInterval || 5) * 1000;
-            this._pollingTimer = this.setInterval(() => this._updateStatus(), intervalMs);
+            this._pollingIntervalMs = (this.config.pollingInterval || 5) * 1000;
+            this._scheduleNextPoll();
         }
 
         // PWA server
@@ -73,7 +74,7 @@ class DuneHdRemote extends utils.Adapter {
     async onUnload(callback) {
         try {
             if (this._pollingTimer) {
-                this.clearInterval(this._pollingTimer);
+                this.clearTimeout(this._pollingTimer);
                 this._pollingTimer = null;
             }
             if (this._pwaServer) {
@@ -182,6 +183,23 @@ class DuneHdRemote extends utils.Adapter {
         }
     }
 
+    // ── Polling scheduler ────────────────────────────────────────────────────
+
+    _scheduleNextPoll() {
+        if (this._pollingTimer) {
+            this.clearTimeout(this._pollingTimer);
+        }
+        const interval = this._wasDisconnected ? 30000 : this._pollingIntervalMs;
+        this._pollingTimer = this.setTimeout(() => this._pollAndReschedule(), interval);
+    }
+
+    async _pollAndReschedule() {
+        await this._updateStatus();
+        if (this.config.pollingEnabled) {
+            this._scheduleNextPoll();
+        }
+    }
+
     // ── Status polling ───────────────────────────────────────────────────────
 
     async _updateStatus() {
@@ -195,6 +213,8 @@ class DuneHdRemote extends utils.Adapter {
             if (connected && this._wasDisconnected) {
                 this.log.info(`Player reconnected (${this.config.playerIP})`);
                 this._wasDisconnected = false;
+                // reschedule immediately with normal interval
+                if (this.config.pollingEnabled) this._scheduleNextPoll();
             }
 
             await this.setStateAsync('info.connection', { val: connected, ack: true });

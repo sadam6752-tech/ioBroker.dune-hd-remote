@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "news": {
+      "1.0.0": {
+        "en": "First stable release: PWA remote control, status polling, offline detection, full i18n (11 languages)",
+        "de": "Erste stabile Version: PWA-Fernbedienung, Status-Polling, Offline-Erkennung, vollständige Übersetzungen (11 Sprachen)",
+        "ru": "Первый стабильный релиз: PWA-пульт, опрос статуса, определение офлайн, полная локализация (11 языков)",
+        "fr": "Première version stable: télécommande PWA, polling de statut, détection hors ligne, i18n complet (11 langues)",
+        "it": "Prima versione stabile: telecomando PWA, polling stato, rilevamento offline, i18n completo (11 lingue)",
+        "es": "Primera versión estable: control remoto PWA, polling de estado, detección offline, i18n completo (11 idiomas)",
+        "pl": "Pierwsza stabilna wersja: pilot PWA, odpytywanie statusu, wykrywanie offline, pełne tłumaczenia (11 języków)",
+        "pt": "Primeira versão estável: controlo remoto PWA, polling de estado, deteção offline, i18n completo (11 idiomas)",
+        "nl": "Eerste stabiele versie: PWA-afstandsbediening, statuspolling, offline-detectie, volledige vertalingen (11 talen)",
+        "uk": "Перший стабільний реліз: PWA-пульт, опит статусу, виявлення офлайн, повна локалізація (11 мов)",
+        "zh-cn": "第一个稳定版本：PWA遥控器，状态轮询，离线检测，完整国际化（11种语言）"
+      },
       "0.2.0": {
         "en": "PWA remote control, improved polling, full i18n",
         "de": "PWA-Fernbedienung, verbessertes Polling, vollständige Übersetzungen",

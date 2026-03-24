@@ -1,3 +1,7 @@
 node_modules/
 .dev-server/
 *.log
+
+.commitinfo
+
+iob_npm.done

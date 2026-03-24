@@ -1,5 +1,7 @@
 # ioBroker.dune-hd-remote
 
+![Logo](admin/dune-hd-remote.png)
+
 Control Dune HD media players via IP network from ioBroker.
 
 ## Features

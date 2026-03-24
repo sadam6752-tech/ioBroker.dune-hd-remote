@@ -1,69 +1,95 @@
 # ioBroker.dune-hd-remote
 
-Control Dune HD media players via IP network.
+Control Dune HD media players via IP network from ioBroker.
 
 ## Features
 
-- Remote control buttons (Play, Pause, Stop, Navigation, etc.)
-- Media playback control (URL playback)
-- Status polling (player state, position, duration)
-- Multiple player instances supported
-- 11 languages supported
+- Full playback control (play, pause, stop, seek, prev/next, fast-forward/rewind)
+- Navigation (D-pad, enter, return, menus)
+- Volume and mute control
+- Status polling (player state, position, duration, volume, bitrate, audio language, video resolution)
+- Built-in PWA web remote — use your phone as a remote control
+- Smart offline polling — reduces poll frequency when player is unreachable
+
+## Supported Models
+
+All Dune HD media players with IP control support (Linux-based firmware).  
+Tested on: **Dune HD Pro 4K** (firmware with XML response format).
+
+| Model type | Default port |
+|---|---|
+| Linux-based (Pro 4K, Solo 4K, etc.) | 80 |
+| Android/ATV-based | 11080 |
 
 ## Configuration
 
-| Setting | Description | Default |
-|---------|-------------|---------|
-| Player Name | Display name | Dune HD |
-| Player IP Address | IP address of the player | 192.168.1.120 |
-| Player Port | HTTP port (80 for Linux, 11080 for Android/ATV) | 80 |
-| Connection Timeout | Timeout in ms | 5000 |
-| Enable Status Polling | Poll player status periodically | true |
-| Polling Interval | Polling interval in seconds | 5 |
+### Player
+| Field | Description |
+|---|---|
+| Player Name | Display name (for reference only) |
+| Player IP Address | IP address of the Dune HD player |
+| Player Port | HTTP port (default: 80) |
+| Connection Timeout | Request timeout in ms (default: 5000) |
 
-## Object Structure
+### Status Polling
+| Field | Description |
+|---|---|
+| Enable Status Polling | Enable periodic status updates |
+| Polling Interval | Interval in seconds when player is online (default: 5) |
+| Offline Polling Interval | Interval in seconds when player is unreachable (default: 30) |
 
-```
-dune-hd-remote.0/
-├── info.connection        – Connected to player
-├── control/
-│   ├── power              – Toggle standby (IR)
-│   ├── play               – Play
-│   ├── pause              – Pause
-│   ├── stop               – Stop
-│   ├── resume             – Resume playback
-│   ├── prev               – Previous
-│   ├── next               – Next
-│   ├── rewind             – Rewind
-│   ├── forward            – Fast forward
-│   ├── mute               – Toggle mute (IR)
-│   └── volume             – Set volume (0-100, Android only)
-├── navigation/
-│   ├── up / down / left / right
-│   ├── ok / back / menu / home
-├── media/
-│   ├── playUrl            – URL to play
-│   └── seek               – Seek to position (seconds)
-└── status/
-    ├── playerStatus       – stopped / playing
-    ├── position           – Current position (s)
-    ├── duration           – Total duration (s)
-    ├── volume             – Current volume
-    ├── mute               – Muted
-    └── currentUrl         – Current media URL
-```
+### PWA Remote Control
+Enable the built-in web remote to control the player from any browser or mobile device.
 
-## Supported Devices
+| Field | Description |
+|---|---|
+| Enable PWA Remote Control | Start the built-in web server |
+| Bind IP Address | Network interface to bind to (0.0.0.0 = all interfaces) |
+| PWA Server Port | Port for the web remote (default: 8765) |
 
-All Dune HD models with firmware ≥ 2010:
-- Dune HD Pro 4K, Duo 4K, Max Vision 4K (Linux, port 80)
-- Dune HD TV-175L/a, AV1 4K (Android, port 11080)
+After enabling, open `http://<iobroker-host>:8765/` in your browser.  
+The URL is also stored in the `info.pwaUrl` state.
+
+**PWA features:**
+- Main tab: D-pad, playback controls, volume, seek
+- Digits tab: number keys, color buttons (A/B/C/D), subtitle, zoom, eject, REC
+- Settings tab: dark/light theme, connection settings
+- Works as installable PWA on iOS and Android (Add to Home Screen)
+
+## States
+
+| State | Type | Description |
+|---|---|---|
+| `info.connection` | boolean | Player reachable |
+| `info.pwaUrl` | string | PWA remote URL |
+| `info.playerModel` | string | Player model name |
+| `info.firmwareVersion` | string | Firmware version |
+| `status.playerStatus` | string | playing / stopped / paused |
+| `status.position` | number | Playback position (seconds) |
+| `status.duration` | number | Total duration (seconds) |
+| `status.volume` | number | Volume level |
+| `status.mute` | boolean | Mute state |
+| `status.caption` | string | Current media title |
+| `status.audioLang` | string | Audio language |
+| `status.videoWidth/Height` | number | Video resolution |
+| `status.bitrate` | number | Current bitrate (bit/s) |
+| `control.play/pause/stop` | boolean | Trigger playback actions |
+| `control.volume` | number | Set volume |
+| `navigation.up/down/left/right/ok/back` | boolean | Navigation buttons |
+| `media.playUrl` | string | Play media from URL |
+| `media.seek` | number | Seek to position (seconds) |
 
 ## Changelog
 
-### 0.1.0 (2026-03-23)
-- (sadam6752-tech) Initial release
+### 0.2.0
+- Built-in PWA web remote control
+- Smart offline polling (configurable interval)
+- Full translations for all ioBroker languages
+- Extended status states (bitrate, audio language, video resolution, buffering)
+
+### 0.1.0
+- Initial release
 
 ## License
 
-MIT License — Copyright (c) 2026 sadam6752-tech
+MIT © sadam6752-tech

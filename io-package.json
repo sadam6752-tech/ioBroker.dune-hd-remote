@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "news": {
+      "0.2.0": {
+        "en": "PWA remote control, improved polling, full i18n",
+        "de": "PWA-Fernbedienung, verbessertes Polling, vollständige Übersetzungen",
+        "ru": "PWA-пульт управления, улучшенный опрос, полная локализация",
+        "fr": "Télécommande PWA, polling amélioré, i18n complet",
+        "it": "Telecomando PWA, polling migliorato, i18n completo",
+        "es": "Control remoto PWA, polling mejorado, i18n completo",
+        "pl": "Pilot PWA, ulepszone odpytywanie, pełne tłumaczenia",
+        "pt": "Controlo remoto PWA, polling melhorado, i18n completo",
+        "nl": "PWA-afstandsbediening, verbeterde polling, volledige vertalingen",
+        "uk": "PWA-пульт керування, покращений опит, повна локалізація",
+        "zh-cn": "PWA遥控器，改进轮询，完整国际化"
+      },
       "0.1.0": {
         "en": "Initial release",
         "de": "Erstveröffentlichung",
@@ -90,14 +103,19 @@
     "playerPort": 80,
     "connectionTimeout": 5000,
     "pollingEnabled": true,
-    "pollingInterval": 5
+    "pollingInterval": 5,
+    "offlinePollingInterval": 30,
+    "enablePwa": false,
+    "pwaPort": 8765
   },
   "objects": [],
   "instanceObjects": [
     {
       "_id": "info",
       "type": "channel",
-      "common": { "name": "Information" },
+      "common": {
+        "name": "Information"
+      },
       "native": {}
     },
     {

@@ -8,5 +8,13 @@
   "Status Polling": "Status Polling",
   "Enable Status Polling": "Enable Status Polling",
   "Polling Interval (seconds)": "Polling Interval (seconds)",
+  "Offline Polling Interval (seconds)": "Offline Polling Interval (seconds)",
+  "Polling interval when player is unreachable": "Polling interval when player is unreachable",
+  "PWA Remote Control": "PWA Remote Control",
+  "Enable PWA Remote Control": "Enable PWA Remote Control",
+  "Bind IP Address": "Bind IP Address",
+  "IP address to bind the PWA server to. Select 0.0.0.0 for all interfaces.": "IP address to bind the PWA server to. Select 0.0.0.0 for all interfaces.",
+  "PWA Server Port": "PWA Server Port",
+  "Port for the built-in PWA web remote (default: 8765)": "Port for the built-in PWA web remote (default: 8765)",
   "Test Connection": "Test Connection"
 }

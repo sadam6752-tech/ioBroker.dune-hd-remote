@@ -11,6 +11,7 @@ class DuneHdRemote extends utils.Adapter {
         /** @type {DunePlayer|null} */
         this.player = null;
         this._pollingTimer = null;
+        this._wasDisconnected = false;
         /** @type {PwaServer|null} */
         this._pwaServer = null;
 
@@ -189,6 +190,13 @@ class DuneHdRemote extends utils.Adapter {
         try {
             const s = await this.player.getStatus(false);
             const connected = s.command_status === 'ok';
+
+            // Log reconnection
+            if (connected && this._wasDisconnected) {
+                this.log.info(`Player reconnected (${this.config.playerIP})`);
+                this._wasDisconnected = false;
+            }
+
             await this.setStateAsync('info.connection', { val: connected, ack: true });
 
             if (!connected) {
@@ -259,7 +267,12 @@ class DuneHdRemote extends utils.Adapter {
                 await this.setStateAsync('info.firmwareVersion', { val: s.firmware_version, ack: true });
             }
         } catch (err) {
-            this.log.warn(`Status update failed (${this.config.playerIP}:${this.config.playerPort}): ${err.message}`);
+            if (!this._wasDisconnected) {
+                this.log.warn(`Player unreachable (${this.config.playerIP}:${this.config.playerPort}): ${err.message}`);
+                this._wasDisconnected = true;
+            } else {
+                this.log.debug(`Player still unreachable (${this.config.playerIP}): ${err.message}`);
+            }
             await this.setStateAsync('info.connection', { val: false, ack: true });
         }
     }

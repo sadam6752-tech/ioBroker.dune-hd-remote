@@ -12,6 +12,8 @@ Control Dune HD media players via IP network from ioBroker.
 - Status polling (player state, position, duration, volume, bitrate, audio language, video resolution)
 - Built-in PWA web remote — use your phone as a remote control
 - Smart offline polling — reduces poll frequency when player is unreachable
+- PWA text input — send text directly to the player's on-screen keyboard
+- PWA Play URL — start media playback from any URL directly from the remote
 
 ## Supported Models
 
@@ -54,6 +56,8 @@ The URL is also stored in the `info.pwaUrl` state.
 
 **PWA features:**
 - Main tab: D-pad, playback controls, volume, seek
+- Main tab: text input field — sends text to the active player keyboard (`set_text` API)
+- Main tab: Play URL field — starts media playback from any URL (`launch_media_url` API)
 - Digits tab: number keys, color buttons (A/B/C/D), subtitle, zoom, eject, REC
 - Settings tab: dark/light theme, connection settings
 - Works as installable PWA on iOS and Android (Add to Home Screen)
@@ -83,14 +87,16 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
-### 0.2.0
-- Built-in PWA web remote control
-- Smart offline polling (configurable interval)
-- Full translations for all ioBroker languages
-- Extended status states (bitrate, audio language, video resolution, buffering)
+### 1.0.1
+- PWA: text input field to send text to the player's on-screen keyboard
+- PWA: Play URL field for direct media playback from any URL
 
-### 0.1.0
-- Initial release
+### 1.0.0
+- First stable release
+- PWA remote control (Main, Digits, Settings tabs)
+- Status polling with configurable online/offline intervals
+- Smart offline detection (warn on first failure, debug on repeated)
+- Full i18n — 11 languages
 
 ## License
 

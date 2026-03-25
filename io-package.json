@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
+      "1.0.1": {
+        "en": "PWA: text input for player keyboard, Play URL field for direct media playback",
+        "de": "PWA: Texteingabe für Player-Tastatur, Play-URL-Feld für direkte Medienwiedergabe",
+        "ru": "PWA: ввод текста для клавиатуры плеера, поле Play URL для прямого воспроизведения медиа",
+        "fr": "PWA: saisie de texte pour le clavier du lecteur, champ Play URL pour la lecture directe",
+        "it": "PWA: input testo per tastiera player, campo Play URL per riproduzione diretta",
+        "es": "PWA: entrada de texto para teclado del reproductor, campo Play URL para reproducción directa",
+        "pl": "PWA: wprowadzanie tekstu dla klawiatury odtwarzacza, pole Play URL do bezpośredniego odtwarzania",
+        "pt": "PWA: entrada de texto para teclado do leitor, campo Play URL para reprodução direta",
+        "nl": "PWA: tekstinvoer voor speler-toetsenbord, Play URL-veld voor directe mediaweergave",
+        "uk": "PWA: введення тексту для клавіатури плеєра, поле Play URL для прямого відтворення медіа",
+        "zh-cn": "PWA：播放器键盘文本输入，Play URL字段用于直接媒体播放"
+      },
       "1.0.0": {
         "en": "First stable release: PWA remote control, status polling, offline detection, full i18n (11 languages)",
         "de": "Erste stabile Version: PWA-Fernbedienung, Status-Polling, Offline-Erkennung, vollständige Übersetzungen (11 Sprachen)",

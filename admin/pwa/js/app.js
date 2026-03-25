@@ -159,6 +159,29 @@ function initButtons() {
     wireIR('btn-rec',      'REC');
     wireIR('btn-return2',  'RETURN');
     wireIR('btn-enter2',   'ENTER');
+
+    // Text input — send text to active player keyboard
+    const textInput = document.getElementById('text-input');
+    wire('btn-send-text', async () => {
+        const text = textInput ? textInput.value.trim() : '';
+        if (!text) return;
+        try {
+            const result = await API.send('set_text', { text });
+            if (result && result.command_status === 'ok') {
+                toast('Text sent');
+                textInput.value = '';
+            } else {
+                toast('No active text field on player', true);
+            }
+        } catch (e) {
+            toast(e.message, true);
+        }
+    });
+    if (textInput) {
+        textInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') document.getElementById('btn-send-text').click();
+        });
+    }
 }
 
 // Settings

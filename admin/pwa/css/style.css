@@ -253,6 +253,40 @@ html, body {
 .toggle-switch input:checked + .toggle-slider { background: var(--accent); }
 .toggle-switch input:checked + .toggle-slider::before { transform: translateX(20px); }
 
+/* ── Text input row ───────────────────────────────────────────────────────── */
+.text-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.text-input-row input {
+  flex: 1;
+  padding: 10px 12px;
+  background: var(--btn);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 14px;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.text-input-row input:focus { outline: 2px solid var(--accent); }
+.btn-send-text {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  min-height: 48px;
+  width: 48px;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-send-text:active { filter: brightness(.85); transform: scale(.95); }
+.btn-send-text svg { width: 20px; height: 20px; fill: #fff; }
+
 /* ── Scrollbar ────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }

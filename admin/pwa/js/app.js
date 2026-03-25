@@ -182,6 +182,24 @@ function initButtons() {
             if (e.key === 'Enter') document.getElementById('btn-send-text').click();
         });
     }
+
+    // Play URL
+    const playUrlInput = document.getElementById('play-url-input');
+    wire('btn-play-url', async () => {
+        const url = playUrlInput ? playUrlInput.value.trim() : '';
+        if (!url) return;
+        try {
+            await API.send('launch_media_url', { media_url: url });
+            toast('Playback started');
+        } catch (e) {
+            toast(e.message, true);
+        }
+    });
+    if (playUrlInput) {
+        playUrlInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') document.getElementById('btn-play-url').click();
+        });
+    }
 }
 
 // Settings

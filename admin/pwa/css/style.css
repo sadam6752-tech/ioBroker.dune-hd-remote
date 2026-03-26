@@ -48,7 +48,7 @@
 html, body {
   height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--bg);
+  background: var(--tab-bg); /* match tab bar so spacer area blends in */
   color: var(--text);
   user-select: none;
   -webkit-tap-highlight-color: transparent;
@@ -59,7 +59,7 @@ html, body {
 #app {
   display: flex;
   flex-direction: column;
-  height: 100svh;
+  height: 100dvh;
   max-width: 480px;
   margin: 0 auto;
 }

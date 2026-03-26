@@ -83,6 +83,13 @@ html, body {
 }
 .tab-content.active { display: flex; flex-direction: column; gap: 10px; }
 
+/* In Safari browser (not PWA): add bottom padding so content isn't hidden behind browser chrome */
+@media not all and (display-mode: standalone) {
+  .tab-content {
+    padding-bottom: 90px;
+  }
+}
+
 /* ── Bottom tab bar ───────────────────────────────────────────────────────── */
 #tab-bar {
   display: flex;

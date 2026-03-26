@@ -89,6 +89,9 @@ html, body {
     padding-bottom: 90px;
   }
 }
+body.safari-browser .tab-content {
+  padding-bottom: 90px;
+}
 
 /* ── Bottom tab bar ───────────────────────────────────────────────────────── */
 #tab-bar {

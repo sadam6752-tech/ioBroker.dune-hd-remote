@@ -240,4 +240,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initButtons();
     initSettings();
+
+    // Detect Safari browser (not PWA) and add class for extra bottom padding
+    const isStandalone = window.navigator.standalone === true;
+    if (!isStandalone) {
+        document.body.classList.add('safari-browser');
+    }
 });

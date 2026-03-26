@@ -240,4 +240,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initButtons();
     initSettings();
+
+    // iOS PWA height fix — tab bar sticks to bottom
+    function setAppHeight() {
+        document.getElementById('app').style.height = window.innerHeight + 'px';
+    }
+    setAppHeight();
+    window.addEventListener('resize', setAppHeight);
 });

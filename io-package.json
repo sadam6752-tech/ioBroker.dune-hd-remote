@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "news": {
+      "1.0.3": {
+        "en": "PWA: disabled double-tap zoom on buttons (iOS)",
+        "de": "PWA: Doppeltipp-Zoom auf Schaltflächen deaktiviert (iOS)",
+        "ru": "PWA: отключено увеличение по двойному нажатию на кнопки (iOS)",
+        "fr": "PWA: zoom double-tap désactivé sur les boutons (iOS)",
+        "it": "PWA: zoom doppio tap disabilitato sui pulsanti (iOS)",
+        "es": "PWA: zoom de doble toque desactivado en botones (iOS)",
+        "pl": "PWA: wyłączono powiększanie podwójnym dotknięciem przycisków (iOS)",
+        "pt": "PWA: zoom de toque duplo desativado nos botões (iOS)",
+        "nl": "PWA: dubbeltik-zoom op knoppen uitgeschakeld (iOS)",
+        "uk": "PWA: вимкнено збільшення подвійним натисканням на кнопки (iOS)",
+        "zh-cn": "PWA：禁用按钮双击缩放（iOS）"
+      },
       "1.0.2": {
         "en": "PWA: quick navigation shortcuts (TV, Sources, Apps, Setup, Favorites, Home), improved button layout",
         "de": "PWA: Schnellnavigation (TV, Quellen, Apps, Einstellungen, Favoriten, Startbildschirm), verbessertes Button-Layout",

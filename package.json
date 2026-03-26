@@ -1,6 +1,6 @@
 {
   "name": "iobroker.dune-hd-remote",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Control Dune HD media players via IP network",
   "author": {
     "name": "sadam6752-tech",

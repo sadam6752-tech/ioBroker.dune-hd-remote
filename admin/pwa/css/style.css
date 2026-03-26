@@ -86,11 +86,11 @@ html, body {
 /* In Safari browser (not PWA): add bottom padding so content isn't hidden behind browser chrome */
 @media not all and (display-mode: standalone) {
   .tab-content {
-    padding-bottom: 90px;
+    padding-bottom: 80px;
   }
 }
 body.safari-browser .tab-content {
-  padding-bottom: 90px;
+  padding-bottom: 80px;
 }
 
 /* ── Bottom tab bar ───────────────────────────────────────────────────────── */
@@ -310,3 +310,4 @@ body.safari-browser .tab-content {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+

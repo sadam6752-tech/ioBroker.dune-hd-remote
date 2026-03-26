@@ -253,6 +253,17 @@ html, body {
 .toggle-switch input:checked + .toggle-slider { background: var(--accent); }
 .toggle-switch input:checked + .toggle-slider::before { transform: translateX(20px); }
 
+/* ── Nav shortcut buttons ─────────────────────────────────────────────────── */
+.btn-nav-shortcut {
+  background: var(--bg2);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: monospace;
+}
+.btn-nav-shortcut:active { filter: brightness(1.4); transform: scale(.95); }
+
 /* ── Text input row ───────────────────────────────────────────────────────── */
 .text-input-row {
   display: flex;

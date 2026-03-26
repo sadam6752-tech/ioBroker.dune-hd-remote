@@ -148,9 +148,17 @@ function initButtons() {
     wireIR('btn-clear',  'CLEAR');
     wireIR('btn-select', 'SELECT');
 
-    // Seek backward / forward (minute-step, like physical remote)
+    // Seek backward / forward
     wireIR('btn-seek-bwd', 'REWIND');
     wireIR('btn-seek-fwd', 'FORWARD');
+
+    // Quick nav shortcuts
+    wire('btn-tv',          () => cmd('open_path', { url: 'root://tv' }));
+    wire('btn-sources',     () => cmd('open_path', { url: 'root://sources' }));
+    wire('btn-apps',        () => cmd('open_path', { url: 'root://applications' }));
+    wire('btn-setup',       () => cmd('open_path', { url: 'root://setup' }));
+    wire('btn-favorites',   () => cmd('open_path', { url: 'root://favorites' }));
+    wire('btn-home-screen', () => cmd('main_screen', {}));
 
     // Other (merged into Digits tab)
     wireIR('btn-subtitle', 'SUBTITLE');

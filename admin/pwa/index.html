@@ -16,17 +16,22 @@
   <!-- ── TAB: MAIN ──────────────────────────────────────────────────────── -->
   <div id="tab-main" class="tab-content active">
 
-    <!-- INFO / POWER / POP UP row -->
-    <div class="row">
-      <button id="btn-info"  class="btn" style="flex:1">INFO</button>
-      <button id="btn-power" class="btn power" style="flex:1" title="Power">
+    <!-- POWER top center -->
+    <div class="row" style="justify-content:center">
+      <button id="btn-power" class="btn power" style="flex:1;max-width:200px" title="Power">
         <svg viewBox="0 0 24 24"><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42A6.92 6.92 0 0 1 19 12c0 3.87-3.13 7-7 7A7 7 0 0 1 5 12c0-2.28 1.09-4.3 2.58-5.42L6.17 5.17A8.932 8.932 0 0 0 3 12a9 9 0 0 0 18 0c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
       </button>
+    </div>
+
+    <!-- INFO / POP UP row -->
+    <div class="row">
+      <button id="btn-info"  class="btn" style="flex:1">INFO</button>
+      <div style="flex:1"></div>
       <button id="btn-popup" class="btn" style="flex:1;font-size:11px">POP UP<br>MENU</button>
     </div>
 
     <!-- D-pad -->
-    <div id="dpad" style="margin-top: 40px;">
+    <div id="dpad">
       <div class="empty"></div>
       <button id="btn-up"    class="btn nav">▲</button>
       <div class="empty"></div>
@@ -96,22 +101,6 @@
       </button>
     </div>
 
-    <!-- Text input -->
-    <div class="text-input-row">
-      <input id="text-input" type="text" placeholder="Type text…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <button id="btn-send-text" class="btn btn-send-text">
-        <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
-      </button>
-    </div>
-
-    <!-- Play URL -->
-    <div class="text-input-row">
-      <input id="play-url-input" type="url" placeholder="Play URL…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <button id="btn-play-url" class="btn btn-send-text" style="background:var(--btn-play)">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-    </div>
-
   </div><!-- /tab-main -->
 
   <!-- ── TAB: DIGITS + OTHER ────────────────────────────────────────────── -->
@@ -155,6 +144,22 @@
     <div class="row">
       <button id="btn-return2" class="btn nav" style="flex:1">RETURN</button>
       <button id="btn-enter2"  class="btn nav" style="flex:1">ENTER</button>
+    </div>
+
+    <!-- Text input -->
+    <div class="text-input-row">
+      <input id="text-input" type="text" placeholder="Type text…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <button id="btn-send-text" class="btn btn-send-text">
+        <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+
+    <!-- Play URL -->
+    <div class="text-input-row">
+      <input id="play-url-input" type="url" placeholder="Play URL…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <button id="btn-play-url" class="btn btn-send-text" style="background:var(--btn-play)">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
     </div>
 
   </div><!-- /tab-digits -->

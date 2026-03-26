@@ -59,8 +59,6 @@ html, body {
 #app {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
-  /* iOS PWA: use svh as fallback to fill full screen */
   height: 100svh;
   max-width: 480px;
   margin: 0 auto;

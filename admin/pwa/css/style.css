@@ -129,8 +129,9 @@ html, body {
 .btn.col-d  { background: var(--btn-d); color: #fff; font-size: 18px; }
 
 /* ── Row helpers ──────────────────────────────────────────────────────────── */
-.row { display: flex; gap: 8px; }
+.row { display: flex; gap: 8px; align-items: stretch; }
 .row .btn { flex: 1; }
+.row > div:not(.btn) { pointer-events: none; }
 
 /* ── D-pad ────────────────────────────────────────────────────────────────── */
 #dpad {

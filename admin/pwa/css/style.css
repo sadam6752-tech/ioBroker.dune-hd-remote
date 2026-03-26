@@ -59,16 +59,8 @@ html, body {
 #app {
   display: flex;
   flex-direction: column;
-  height: 100svh;
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-/* ── App shell ────────────────────────────────────────────────────────────── */
-#app {
-  display: flex;
-  flex-direction: column;
-  height: 100svh;
+  min-height: 100svh;
+  padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
   max-width: 480px;
   margin: 0 auto;
 }
@@ -83,22 +75,17 @@ html, body {
 }
 .tab-content.active { display: flex; flex-direction: column; gap: 10px; }
 
-/* In Safari browser (not PWA): add bottom padding so content isn't hidden behind browser chrome */
-@media not all and (display-mode: standalone) {
-  .tab-content {
-    padding-bottom: 80px;
-  }
-}
-body.safari-browser .tab-content {
-  padding-bottom: 80px;
-}
-
 /* ── Bottom tab bar ───────────────────────────────────────────────────────── */
 #tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   background: var(--tab-bg);
   border-top: 1px solid var(--border);
-  flex-shrink: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  z-index: 100;
 }
 .tab-btn {
   flex: 1;

@@ -240,9 +240,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initButtons();
     initSettings();
-
-    // In PWA mode (standalone) remove extra bottom padding — not needed
-    if (window.navigator.standalone === true) {
-        document.documentElement.style.setProperty('--content-pb', '12px');
-    }
 });

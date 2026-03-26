@@ -84,14 +84,12 @@ html, body {
   background: var(--tab-bg);
   border-top: 1px solid var(--border);
   flex-shrink: 0;
-  /* iOS Safari: push tab bar above browser chrome */
-  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
-/* iOS PWA standalone: home indicator area is smaller, keep tab bar compact */
-@media (display-mode: standalone) {
-  #tab-bar {
-    padding-bottom: max(4px, env(safe-area-inset-bottom, 4px));
-  }
+/* Safe area spacer below tab bar (home indicator on iPhone) */
+#tab-bar-spacer {
+  flex-shrink: 0;
+  height: env(safe-area-inset-bottom, 0px);
+  background: var(--tab-bg);
 }
 .tab-btn {
   flex: 1;

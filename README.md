@@ -87,6 +87,14 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.1.3
+- Use standard workflow and testing scripts as provided by create-adapter
+- Added `needs: check-and-lint` to adapter-tests job
+- Restructured test directory to match ioBroker.example template
+
+### 1.1.2
+- Use `node:` prefix for all built-in Node.js modules (fs, http, path, url)
+
 ### 1.1.1
 - Fixed prettier formatting errors in lib files
 - Added `test:integration` script for CI/CD compatibility

@@ -67,32 +67,6 @@
         "nl": "Eerste stabiele versie: PWA-afstandsbediening, statuspolling, offline-detectie, volledige vertalingen (11 talen)",
         "uk": "Перший стабільний реліз: PWA-пульт, опит статусу, виявлення офлайн, повна локалізація (11 мов)",
         "zh-cn": "第一个稳定版本：PWA遥控器，状态轮询，离线检测，完整国际化（11种语言）"
-      },
-      "0.2.0": {
-        "en": "PWA remote control, improved polling, full i18n",
-        "de": "PWA-Fernbedienung, verbessertes Polling, vollständige Übersetzungen",
-        "ru": "PWA-пульт управления, улучшенный опрос, полная локализация",
-        "fr": "Télécommande PWA, polling amélioré, i18n complet",
-        "it": "Telecomando PWA, polling migliorato, i18n completo",
-        "es": "Control remoto PWA, polling mejorado, i18n completo",
-        "pl": "Pilot PWA, ulepszone odpytywanie, pełne tłumaczenia",
-        "pt": "Controlo remoto PWA, polling melhorado, i18n completo",
-        "nl": "PWA-afstandsbediening, verbeterde polling, volledige vertalingen",
-        "uk": "PWA-пульт керування, покращений опит, повна локалізація",
-        "zh-cn": "PWA遥控器，改进轮询，完整国际化"
-      },
-      "0.1.0": {
-        "en": "Initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "Первый выпуск",
-        "fr": "Première version",
-        "it": "Prima versione",
-        "es": "Primera versión",
-        "pl": "Pierwsze wydanie",
-        "pt": "Primeira versão",
-        "nl": "Eerste versie",
-        "uk": "Перший випуск",
-        "zh-cn": "初始版本"
       }
     },
     "titleLang": {

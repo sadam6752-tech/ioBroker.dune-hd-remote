@@ -110,4 +110,6 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## License
 
-MIT © sadam6752-tech
+MIT © 2026 sadam6752-tech
+
+Copyright (c) 2026 sadam6752-tech <sadam6752@gmail.com>

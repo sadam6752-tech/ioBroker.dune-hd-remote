@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "news": {
+      "1.0.8": {
+        "en": "Fixed missing devDependencies (manual-review, adapter-dev) — permanent fix",
+        "de": "Fehlende devDependencies dauerhaft behoben (manual-review, adapter-dev)",
+        "ru": "Окончательно исправлены отсутствующие devDependencies (manual-review, adapter-dev)",
+        "fr": "Correction permanente des dépendances manquantes (manual-review, adapter-dev)",
+        "it": "Correzione permanente delle dipendenze mancanti (manual-review, adapter-dev)",
+        "es": "Corrección permanente de dependencias faltantes (manual-review, adapter-dev)",
+        "pl": "Trwała naprawa brakujących devDependencies (manual-review, adapter-dev)",
+        "pt": "Correção permanente de dependências em falta (manual-review, adapter-dev)",
+        "nl": "Permanente fix voor ontbrekende devDependencies (manual-review, adapter-dev)",
+        "uk": "Остаточне виправлення відсутніх devDependencies (manual-review, adapter-dev)",
+        "zh-cn": "永久修复缺失的devDependencies（manual-review、adapter-dev）"
+      },
       "1.0.7": {
         "en": "Fixed missing devDependencies (manual-review, adapter-dev)",
         "de": "Fehlende devDependencies hinzugefügt (manual-review, adapter-dev)",
@@ -80,19 +93,6 @@
         "nl": "PWA: snelnavigatie-snelkoppelingen (TV, Bronnen, Apps, Instellingen, Favorieten, Startscherm), verbeterde lay-out",
         "uk": "PWA: швидка навігація (ТБ, Джерела, Додатки, Налаштування, Вибране, Головний екран), покращений макет",
         "zh-cn": "PWA：快速导航快捷方式（电视、来源、应用、设置、收藏、主屏幕），改进按钮布局"
-      },
-      "1.0.1": {
-        "en": "PWA: text input for player keyboard, Play URL field for direct media playback",
-        "de": "PWA: Texteingabe für Player-Tastatur, Play-URL-Feld für direkte Medienwiedergabe",
-        "ru": "PWA: ввод текста для клавиатуры плеера, поле Play URL для прямого воспроизведения медиа",
-        "fr": "PWA: saisie de texte pour le clavier du lecteur, champ Play URL pour la lecture directe",
-        "it": "PWA: input testo per tastiera player, campo Play URL per riproduzione diretta",
-        "es": "PWA: entrada de texto para teclado del reproductor, campo Play URL para reproducción directa",
-        "pl": "PWA: wprowadzanie tekstu dla klawiatury odtwarzacza, pole Play URL do bezpośredniego odtwarzania",
-        "pt": "PWA: entrada de texto para teclado do leitor, campo Play URL para reprodução direta",
-        "nl": "PWA: tekstinvoer voor speler-toetsenbord, Play URL-veld voor directe mediaweergave",
-        "uk": "PWA: введення тексту для клавіатури плеєра, поле Play URL для прямого відтворення медіа",
-        "zh-cn": "PWA：播放器键盘文本输入，Play URL字段用于直接媒体播放"
       }
     },
     "titleLang": {

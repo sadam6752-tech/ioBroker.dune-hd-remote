@@ -87,6 +87,9 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.0.8
+- Fixed missing devDependencies (manual-review, adapter-dev) — permanent fix
+
 ### 1.0.7
 - Fixed missing devDependencies (manual-review, adapter-dev)
 

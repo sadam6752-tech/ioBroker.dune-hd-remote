@@ -42,6 +42,7 @@
   "scripts": {
     "test:js": "mocha --config mocharc.custom.json \"{!(node_modules)/**/*.test.js,*.test.js}\"",
     "test:package": "mocha test/package --exit",
+    "test:integration": "echo 'No integration tests defined'",
     "test": "npm run test:js && npm run test:package",
     "lint": "eslint .",
     "release": "release-script"

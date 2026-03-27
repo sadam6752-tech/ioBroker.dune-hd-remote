@@ -87,6 +87,13 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.0.3
+- PWA: disabled double-tap zoom on buttons (iOS)
+
+### 1.0.2
+- PWA: quick navigation shortcuts (TV, Sources, Apps, Setup, Favorites, Home)
+- PWA: improved button layout on Main tab
+
 ### 1.0.1
 - PWA: text input field to send text to the player's on-screen keyboard
 - PWA: Play URL field for direct media playback from any URL

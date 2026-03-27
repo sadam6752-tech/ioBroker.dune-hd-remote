@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "news": {
+      "1.0.6": {
+        "en": "Fixed CI/CD workflow, updated VS Code schema definitions",
+        "de": "CI/CD-Workflow korrigiert, VS Code Schema-Definitionen aktualisiert",
+        "ru": "Исправлен CI/CD workflow, обновлены схемы VS Code",
+        "fr": "Workflow CI/CD corrigé, définitions de schéma VS Code mises à jour",
+        "it": "Workflow CI/CD corretto, definizioni schema VS Code aggiornate",
+        "es": "Workflow CI/CD corregido, definiciones de esquema VS Code actualizadas",
+        "pl": "Naprawiono workflow CI/CD, zaktualizowano definicje schematu VS Code",
+        "pt": "Workflow CI/CD corrigido, definições de esquema VS Code atualizadas",
+        "nl": "CI/CD workflow gecorrigeerd, VS Code schemadefinities bijgewerkt",
+        "uk": "Виправлено CI/CD workflow, оновлено схеми VS Code",
+        "zh-cn": "修复CI/CD工作流，更新VS Code架构定义"
+      },
       "1.0.5": {
         "en": "Repository preparation: updated dependencies, added CI/CD workflow, fixed repochecker issues",
         "de": "Repository-Vorbereitung: Abhängigkeiten aktualisiert, CI/CD-Workflow hinzugefügt, Repochecker-Fehler behoben",

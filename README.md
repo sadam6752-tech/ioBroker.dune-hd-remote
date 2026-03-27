@@ -87,6 +87,10 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.0.6
+- Fixed CI/CD workflow (required jobs, tags pattern)
+- Updated VS Code schema definitions
+
 ### 1.0.5
 - Repository preparation: updated dependencies (node>=20, adapter-core 3.3.2), added CI/CD workflow, fixed repochecker issues
 

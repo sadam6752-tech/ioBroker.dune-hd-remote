@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "news": {
+      "1.1.2": {
+        "en": "Use node: prefix for built-in modules (fs, http, path, url)",
+        "de": "node:-Präfix für eingebaute Module verwendet (fs, http, path, url)",
+        "ru": "Используется префикс node: для встроенных модулей (fs, http, path, url)",
+        "fr": "Utilisation du préfixe node: pour les modules intégrés (fs, http, path, url)",
+        "it": "Utilizzo del prefisso node: per i moduli integrati (fs, http, path, url)",
+        "es": "Uso del prefijo node: para módulos integrados (fs, http, path, url)",
+        "pl": "Użyto prefiksu node: dla wbudowanych modułów (fs, http, path, url)",
+        "pt": "Uso do prefixo node: para módulos integrados (fs, http, path, url)",
+        "nl": "node: prefix gebruikt voor ingebouwde modules (fs, http, path, url)",
+        "uk": "Використовується префікс node: для вбудованих модулів (fs, http, path, url)",
+        "zh-cn": "内置模块使用node:前缀（fs、http、path、url）"
+      },
       "1.1.1": {
         "en": "Fixed CI/CD: prettier formatting, added test:integration script",
         "de": "CI/CD korrigiert: Prettier-Formatierung, test:integration Skript hinzugefügt",
@@ -80,19 +93,6 @@
         "nl": "CI/CD workflow gecorrigeerd, VS Code schemadefinities bijgewerkt",
         "uk": "Виправлено CI/CD workflow, оновлено схеми VS Code",
         "zh-cn": "修复CI/CD工作流，更新VS Code架构定义"
-      },
-      "1.0.5": {
-        "en": "Repository preparation: updated dependencies, added CI/CD workflow, fixed repochecker issues",
-        "de": "Repository-Vorbereitung: Abhängigkeiten aktualisiert, CI/CD-Workflow hinzugefügt, Repochecker-Fehler behoben",
-        "ru": "Подготовка к репозиторию: обновлены зависимости, добавлен CI/CD, исправлены ошибки repochecker",
-        "fr": "Préparation du dépôt: dépendances mises à jour, workflow CI/CD ajouté, erreurs repochecker corrigées",
-        "it": "Preparazione repository: dipendenze aggiornate, workflow CI/CD aggiunto, errori repochecker corretti",
-        "es": "Preparación del repositorio: dependencias actualizadas, workflow CI/CD añadido, errores repochecker corregidos",
-        "pl": "Przygotowanie repozytorium: zaktualizowano zależności, dodano workflow CI/CD, naprawiono błędy repochecker",
-        "pt": "Preparação do repositório: dependências atualizadas, workflow CI/CD adicionado, erros repochecker corrigidos",
-        "nl": "Repository voorbereiding: afhankelijkheden bijgewerkt, CI/CD workflow toegevoegd, repochecker fouten opgelost",
-        "uk": "Підготовка репозиторію: оновлено залежності, додано CI/CD, виправлено помилки repochecker",
-        "zh-cn": "仓库准备：更新依赖项，添加CI/CD工作流，修复repochecker错误"
       }
     },
     "titleLang": {

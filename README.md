@@ -87,6 +87,12 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.1.5
+- Fixed README: added missing changelog entry for 1.1.4
+
+### 1.1.4
+- Fixed README changelog (E6006), added `needs: check-and-lint` to adapter-tests job (S3014)
+
 ### 1.1.3
 - Use standard workflow and testing scripts as provided by create-adapter
 - Added `needs: check-and-lint` to adapter-tests job

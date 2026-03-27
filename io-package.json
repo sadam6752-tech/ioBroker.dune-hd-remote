@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "news": {
+      "1.1.5": {
+        "en": "Fixed README: added missing changelog entries for 1.1.4",
+        "de": "README korrigiert: fehlende Changelog-Einträge für 1.1.4 hinzugefügt",
+        "ru": "Исправлен README: добавлены недостающие записи changelog для 1.1.4",
+        "fr": "README corrigé: entrées changelog manquantes pour 1.1.4 ajoutées",
+        "it": "README corretto: voci changelog mancanti per 1.1.4 aggiunte",
+        "es": "README corregido: entradas changelog faltantes para 1.1.4 añadidas",
+        "pl": "Naprawiono README: dodano brakujące wpisy changelog dla 1.1.4",
+        "pt": "README corrigido: entradas changelog em falta para 1.1.4 adicionadas",
+        "nl": "README gecorrigeerd: ontbrekende changelog-vermeldingen voor 1.1.4 toegevoegd",
+        "uk": "Виправлено README: додано відсутні записи changelog для 1.1.4",
+        "zh-cn": "修复README：添加1.1.4缺失的changelog条目"
+      },
       "1.1.4": {
         "en": "Fixed README changelog, added needs: check-and-lint to adapter-tests job",
         "de": "README Changelog korrigiert, needs: check-and-lint zu adapter-tests Job hinzugefügt",
@@ -67,19 +80,6 @@
         "nl": "CI/CD gecorrigeerd: gebruik van ioBroker testing actions, dependabot configuratie bijgewerkt met github-actions ondersteuning",
         "uk": "Виправлено CI/CD: використовуються ioBroker testing actions, оновлено dependabot з підтримкою github-actions",
         "zh-cn": "修复CI/CD：使用ioBroker测试动作，更新dependabot配置支持github-actions"
-      },
-      "1.0.9": {
-        "en": "Improved CI/CD workflow with ioBroker testing actions, added dependabot, use node: prefix for built-in modules",
-        "de": "CI/CD-Workflow mit ioBroker-Testing-Actions verbessert, Dependabot hinzugefügt, node:-Präfix für eingebaute Module",
-        "ru": "Улучшен CI/CD с ioBroker testing actions, добавлен dependabot, node: префикс для встроенных модулей",
-        "fr": "Workflow CI/CD amélioré avec ioBroker testing actions, dependabot ajouté, préfixe node: pour modules intégrés",
-        "it": "Workflow CI/CD migliorato con ioBroker testing actions, dependabot aggiunto, prefisso node: per moduli integrati",
-        "es": "Workflow CI/CD mejorado con ioBroker testing actions, dependabot añadido, prefijo node: para módulos integrados",
-        "pl": "Ulepszony workflow CI/CD z ioBroker testing actions, dodano dependabot, prefiks node: dla wbudowanych modułów",
-        "pt": "Workflow CI/CD melhorado com ioBroker testing actions, dependabot adicionado, prefixo node: para módulos integrados",
-        "nl": "Verbeterde CI/CD workflow met ioBroker testing actions, dependabot toegevoegd, node: prefix voor ingebouwde modules",
-        "uk": "Покращено CI/CD з ioBroker testing actions, додано dependabot, префікс node: для вбудованих модулів",
-        "zh-cn": "改进CI/CD工作流，添加dependabot，内置模块使用node:前缀"
       }
     },
     "titleLang": {

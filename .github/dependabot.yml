@@ -3,5 +3,13 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: monthly
-    open-pull-requests-limit: 5
+      interval: cron
+      cron: '0 4 * * 1'
+    open-pull-requests-limit: 15
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: cron
+      cron: '0 4 * * 1'
+    open-pull-requests-limit: 15

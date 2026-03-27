@@ -1,6 +1,6 @@
 {
   "name": "iobroker.dune-hd-remote",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Control Dune HD media players via IP network",
   "author": {
     "name": "sadam6752-tech",
@@ -40,9 +40,9 @@
   },
   "main": "main.js",
   "scripts": {
-    "test:js": "mocha --config mocharc.custom.json \"{!(node_modules)/**/*.test.js,*.test.js}\"",
+    "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules)/**/*.test.js,*.test.js}\"",
     "test:package": "mocha test/package --exit",
-    "test:integration": "echo 'No integration tests defined'",
+    "test:integration": "mocha test/integration --exit",
     "test": "npm run test:js && npm run test:package",
     "lint": "eslint .",
     "release": "release-script"

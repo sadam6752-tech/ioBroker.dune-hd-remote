@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "news": {
+      "1.1.3": {
+        "en": "Use standard workflow and testing scripts as provided by create-adapter",
+        "de": "Standard-Workflow und Test-Skripte aus create-adapter verwendet",
+        "ru": "Используются стандартные workflow и тестовые скрипты из create-adapter",
+        "fr": "Utilisation du workflow standard et des scripts de test de create-adapter",
+        "it": "Utilizzo del workflow standard e degli script di test di create-adapter",
+        "es": "Uso del workflow estándar y scripts de prueba de create-adapter",
+        "pl": "Użyto standardowego workflow i skryptów testowych z create-adapter",
+        "pt": "Uso do workflow padrão e scripts de teste do create-adapter",
+        "nl": "Standaard workflow en testscripts van create-adapter gebruikt",
+        "uk": "Використовуються стандартні workflow та тестові скрипти з create-adapter",
+        "zh-cn": "使用create-adapter提供的标准工作流和测试脚本"
+      },
       "1.1.2": {
         "en": "Use node: prefix for built-in modules (fs, http, path, url)",
         "de": "node:-Präfix für eingebaute Module verwendet (fs, http, path, url)",
@@ -67,32 +80,6 @@
         "nl": "Permanente fix voor ontbrekende devDependencies (manual-review, adapter-dev)",
         "uk": "Остаточне виправлення відсутніх devDependencies (manual-review, adapter-dev)",
         "zh-cn": "永久修复缺失的devDependencies（manual-review、adapter-dev）"
-      },
-      "1.0.7": {
-        "en": "Fixed missing devDependencies (manual-review, adapter-dev)",
-        "de": "Fehlende devDependencies hinzugefügt (manual-review, adapter-dev)",
-        "ru": "Исправлены отсутствующие devDependencies (manual-review, adapter-dev)",
-        "fr": "Dépendances de développement manquantes ajoutées (manual-review, adapter-dev)",
-        "it": "Dipendenze di sviluppo mancanti aggiunte (manual-review, adapter-dev)",
-        "es": "Dependencias de desarrollo faltantes añadidas (manual-review, adapter-dev)",
-        "pl": "Dodano brakujące devDependencies (manual-review, adapter-dev)",
-        "pt": "Dependências de desenvolvimento em falta adicionadas (manual-review, adapter-dev)",
-        "nl": "Ontbrekende devDependencies toegevoegd (manual-review, adapter-dev)",
-        "uk": "Виправлено відсутні devDependencies (manual-review, adapter-dev)",
-        "zh-cn": "修复缺失的devDependencies（manual-review、adapter-dev）"
-      },
-      "1.0.6": {
-        "en": "Fixed CI/CD workflow, updated VS Code schema definitions",
-        "de": "CI/CD-Workflow korrigiert, VS Code Schema-Definitionen aktualisiert",
-        "ru": "Исправлен CI/CD workflow, обновлены схемы VS Code",
-        "fr": "Workflow CI/CD corrigé, définitions de schéma VS Code mises à jour",
-        "it": "Workflow CI/CD corretto, definizioni schema VS Code aggiornate",
-        "es": "Workflow CI/CD corregido, definiciones de esquema VS Code actualizadas",
-        "pl": "Naprawiono workflow CI/CD, zaktualizowano definicje schematu VS Code",
-        "pt": "Workflow CI/CD corrigido, definições de esquema VS Code atualizadas",
-        "nl": "CI/CD workflow gecorrigeerd, VS Code schemadefinities bijgewerkt",
-        "uk": "Виправлено CI/CD workflow, оновлено схеми VS Code",
-        "zh-cn": "修复CI/CD工作流，更新VS Code架构定义"
       }
     },
     "titleLang": {

@@ -87,6 +87,11 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.0.9
+- Improved CI/CD workflow with official ioBroker testing actions and concurrency
+- Added dependabot for automatic dependency updates
+- Use `node:` prefix for built-in Node.js modules
+
 ### 1.0.8
 - Fixed missing devDependencies (manual-review, adapter-dev) — permanent fix
 

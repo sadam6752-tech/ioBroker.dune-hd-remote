@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "news": {
+      "1.0.9": {
+        "en": "Improved CI/CD workflow with ioBroker testing actions, added dependabot, use node: prefix for built-in modules",
+        "de": "CI/CD-Workflow mit ioBroker-Testing-Actions verbessert, Dependabot hinzugefügt, node:-Präfix für eingebaute Module",
+        "ru": "Улучшен CI/CD с ioBroker testing actions, добавлен dependabot, node: префикс для встроенных модулей",
+        "fr": "Workflow CI/CD amélioré avec ioBroker testing actions, dependabot ajouté, préfixe node: pour modules intégrés",
+        "it": "Workflow CI/CD migliorato con ioBroker testing actions, dependabot aggiunto, prefisso node: per moduli integrati",
+        "es": "Workflow CI/CD mejorado con ioBroker testing actions, dependabot añadido, prefijo node: para módulos integrados",
+        "pl": "Ulepszony workflow CI/CD z ioBroker testing actions, dodano dependabot, prefiks node: dla wbudowanych modułów",
+        "pt": "Workflow CI/CD melhorado com ioBroker testing actions, dependabot adicionado, prefixo node: para módulos integrados",
+        "nl": "Verbeterde CI/CD workflow met ioBroker testing actions, dependabot toegevoegd, node: prefix voor ingebouwde modules",
+        "uk": "Покращено CI/CD з ioBroker testing actions, додано dependabot, префікс node: для вбудованих модулів",
+        "zh-cn": "改进CI/CD工作流，添加dependabot，内置模块使用node:前缀"
+      },
       "1.0.8": {
         "en": "Fixed missing devDependencies (manual-review, adapter-dev) — permanent fix",
         "de": "Fehlende devDependencies dauerhaft behoben (manual-review, adapter-dev)",
@@ -80,19 +93,6 @@
         "nl": "PWA: dubbeltik-zoom op knoppen uitgeschakeld (iOS)",
         "uk": "PWA: вимкнено збільшення подвійним натисканням на кнопки (iOS)",
         "zh-cn": "PWA：禁用按钮双击缩放（iOS）"
-      },
-      "1.0.2": {
-        "en": "PWA: quick navigation shortcuts (TV, Sources, Apps, Setup, Favorites, Home), improved button layout",
-        "de": "PWA: Schnellnavigation (TV, Quellen, Apps, Einstellungen, Favoriten, Startbildschirm), verbessertes Button-Layout",
-        "ru": "PWA: быстрая навигация (ТВ, Источники, Приложения, Настройки, Избранное, Главный экран), улучшенный макет кнопок",
-        "fr": "PWA: raccourcis de navigation rapide (TV, Sources, Apps, Paramètres, Favoris, Accueil), mise en page améliorée",
-        "it": "PWA: scorciatoie di navigazione rapida (TV, Sorgenti, App, Impostazioni, Preferiti, Home), layout migliorato",
-        "es": "PWA: accesos directos de navegación rápida (TV, Fuentes, Apps, Configuración, Favoritos, Inicio), diseño mejorado",
-        "pl": "PWA: skróty szybkiej nawigacji (TV, Źródła, Aplikacje, Ustawienia, Ulubione, Ekran główny), poprawiony układ",
-        "pt": "PWA: atalhos de navegação rápida (TV, Fontes, Apps, Configurações, Favoritos, Início), layout melhorado",
-        "nl": "PWA: snelnavigatie-snelkoppelingen (TV, Bronnen, Apps, Instellingen, Favorieten, Startscherm), verbeterde lay-out",
-        "uk": "PWA: швидка навігація (ТБ, Джерела, Додатки, Налаштування, Вибране, Головний екран), покращений макет",
-        "zh-cn": "PWA：快速导航快捷方式（电视、来源、应用、设置、收藏、主屏幕），改进按钮布局"
       }
     },
     "titleLang": {

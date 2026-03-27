@@ -87,6 +87,10 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.1.1
+- Fixed prettier formatting errors in lib files
+- Added `test:integration` script for CI/CD compatibility
+
 ### 1.1.0
 - Fixed CI/CD: use official ioBroker testing actions (check, adapter, deploy)
 - Updated dependabot config: added github-actions support, cron schedule, auto-merge

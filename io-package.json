@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "news": {
+      "1.1.1": {
+        "en": "Fixed CI/CD: prettier formatting, added test:integration script",
+        "de": "CI/CD korrigiert: Prettier-Formatierung, test:integration Skript hinzugefügt",
+        "ru": "Исправлен CI/CD: форматирование prettier, добавлен скрипт test:integration",
+        "fr": "CI/CD corrigé: formatage prettier, script test:integration ajouté",
+        "it": "CI/CD corretto: formattazione prettier, script test:integration aggiunto",
+        "es": "CI/CD corregido: formato prettier, script test:integration añadido",
+        "pl": "Naprawiono CI/CD: formatowanie prettier, dodano skrypt test:integration",
+        "pt": "CI/CD corrigido: formatação prettier, script test:integration adicionado",
+        "nl": "CI/CD gecorrigeerd: prettier opmaak, test:integration script toegevoegd",
+        "uk": "Виправлено CI/CD: форматування prettier, додано скрипт test:integration",
+        "zh-cn": "修复CI/CD：prettier格式化，添加test:integration脚本"
+      },
       "1.1.0": {
         "en": "Fixed CI/CD: use ioBroker testing actions, updated dependabot config with github-actions support",
         "de": "CI/CD korrigiert: ioBroker Testing Actions verwendet, Dependabot-Konfiguration mit GitHub-Actions-Support aktualisiert",
@@ -80,19 +93,6 @@
         "nl": "Repository voorbereiding: afhankelijkheden bijgewerkt, CI/CD workflow toegevoegd, repochecker fouten opgelost",
         "uk": "Підготовка репозиторію: оновлено залежності, додано CI/CD, виправлено помилки repochecker",
         "zh-cn": "仓库准备：更新依赖项，添加CI/CD工作流，修复repochecker错误"
-      },
-      "1.0.4": {
-        "en": "Added media.setText state to send text to player on-screen keyboard",
-        "de": "media.setText State hinzugefügt, um Text an die Bildschirmtastatur des Players zu senden",
-        "ru": "Добавлен state media.setText для отправки текста на экранную клавиатуру плеера",
-        "fr": "Ajout de l'état media.setText pour envoyer du texte au clavier virtuel du lecteur",
-        "it": "Aggiunto stato media.setText per inviare testo alla tastiera virtuale del player",
-        "es": "Añadido estado media.setText para enviar texto al teclado virtual del reproductor",
-        "pl": "Dodano stan media.setText do wysyłania tekstu na klawiaturę ekranową odtwarzacza",
-        "pt": "Adicionado estado media.setText para enviar texto para o teclado virtual do leitor",
-        "nl": "media.setText state toegevoegd om tekst naar het schermtoetsenbord van de speler te sturen",
-        "uk": "Додано стан media.setText для надсилання тексту на екранну клавіатуру плеєра",
-        "zh-cn": "添加media.setText状态以向播放器屏幕键盘发送文本"
       }
     },
     "titleLang": {

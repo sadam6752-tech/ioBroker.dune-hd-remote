@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "news": {
+      "1.1.0": {
+        "en": "Fixed CI/CD: use ioBroker testing actions, updated dependabot config with github-actions support",
+        "de": "CI/CD korrigiert: ioBroker Testing Actions verwendet, Dependabot-Konfiguration mit GitHub-Actions-Support aktualisiert",
+        "ru": "Исправлен CI/CD: используются ioBroker testing actions, обновлён dependabot с поддержкой github-actions",
+        "fr": "CI/CD corrigé: utilisation des ioBroker testing actions, configuration dependabot mise à jour avec support github-actions",
+        "it": "CI/CD corretto: utilizzo ioBroker testing actions, configurazione dependabot aggiornata con supporto github-actions",
+        "es": "CI/CD corregido: uso de ioBroker testing actions, configuración dependabot actualizada con soporte github-actions",
+        "pl": "Naprawiono CI/CD: użyto ioBroker testing actions, zaktualizowano konfigurację dependabot z obsługą github-actions",
+        "pt": "CI/CD corrigido: uso de ioBroker testing actions, configuração dependabot atualizada com suporte github-actions",
+        "nl": "CI/CD gecorrigeerd: gebruik van ioBroker testing actions, dependabot configuratie bijgewerkt met github-actions ondersteuning",
+        "uk": "Виправлено CI/CD: використовуються ioBroker testing actions, оновлено dependabot з підтримкою github-actions",
+        "zh-cn": "修复CI/CD：使用ioBroker测试动作，更新dependabot配置支持github-actions"
+      },
       "1.0.9": {
         "en": "Improved CI/CD workflow with ioBroker testing actions, added dependabot, use node: prefix for built-in modules",
         "de": "CI/CD-Workflow mit ioBroker-Testing-Actions verbessert, Dependabot hinzugefügt, node:-Präfix für eingebaute Module",
@@ -80,19 +93,6 @@
         "nl": "media.setText state toegevoegd om tekst naar het schermtoetsenbord van de speler te sturen",
         "uk": "Додано стан media.setText для надсилання тексту на екранну клавіатуру плеєра",
         "zh-cn": "添加media.setText状态以向播放器屏幕键盘发送文本"
-      },
-      "1.0.3": {
-        "en": "PWA: disabled double-tap zoom on buttons (iOS)",
-        "de": "PWA: Doppeltipp-Zoom auf Schaltflächen deaktiviert (iOS)",
-        "ru": "PWA: отключено увеличение по двойному нажатию на кнопки (iOS)",
-        "fr": "PWA: zoom double-tap désactivé sur les boutons (iOS)",
-        "it": "PWA: zoom doppio tap disabilitato sui pulsanti (iOS)",
-        "es": "PWA: zoom de doble toque desactivado en botones (iOS)",
-        "pl": "PWA: wyłączono powiększanie podwójnym dotknięciem przycisków (iOS)",
-        "pt": "PWA: zoom de toque duplo desativado nos botões (iOS)",
-        "nl": "PWA: dubbeltik-zoom op knoppen uitgeschakeld (iOS)",
-        "uk": "PWA: вимкнено збільшення подвійним натисканням на кнопки (iOS)",
-        "zh-cn": "PWA：禁用按钮双击缩放（iOS）"
       }
     },
     "titleLang": {

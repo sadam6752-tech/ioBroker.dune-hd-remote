@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "news": {
+      "1.0.5": {
+        "en": "Repository preparation: updated dependencies, added CI/CD workflow, fixed repochecker issues",
+        "de": "Repository-Vorbereitung: Abhängigkeiten aktualisiert, CI/CD-Workflow hinzugefügt, Repochecker-Fehler behoben",
+        "ru": "Подготовка к репозиторию: обновлены зависимости, добавлен CI/CD, исправлены ошибки repochecker",
+        "fr": "Préparation du dépôt: dépendances mises à jour, workflow CI/CD ajouté, erreurs repochecker corrigées",
+        "it": "Preparazione repository: dipendenze aggiornate, workflow CI/CD aggiunto, errori repochecker corretti",
+        "es": "Preparación del repositorio: dependencias actualizadas, workflow CI/CD añadido, errores repochecker corregidos",
+        "pl": "Przygotowanie repozytorium: zaktualizowano zależności, dodano workflow CI/CD, naprawiono błędy repochecker",
+        "pt": "Preparação do repositório: dependências atualizadas, workflow CI/CD adicionado, erros repochecker corrigidos",
+        "nl": "Repository voorbereiding: afhankelijkheden bijgewerkt, CI/CD workflow toegevoegd, repochecker fouten opgelost",
+        "uk": "Підготовка репозиторію: оновлено залежності, додано CI/CD, виправлено помилки repochecker",
+        "zh-cn": "仓库准备：更新依赖项，添加CI/CD工作流，修复repochecker错误"
+      },
       "1.0.4": {
         "en": "Added media.setText state to send text to player on-screen keyboard",
         "de": "media.setText State hinzugefügt, um Text an die Bildschirmtastatur des Players zu senden",

@@ -87,6 +87,9 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.0.5
+- Repository preparation: updated dependencies (node>=20, adapter-core 3.3.2), added CI/CD workflow, fixed repochecker issues
+
 ### 1.0.4
 - Added `media.setText` state to send text to player on-screen keyboard from ioBroker
 

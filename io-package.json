@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "news": {
+      "1.0.4": {
+        "en": "Added media.setText state to send text to player on-screen keyboard",
+        "de": "media.setText State hinzugefügt, um Text an die Bildschirmtastatur des Players zu senden",
+        "ru": "Добавлен state media.setText для отправки текста на экранную клавиатуру плеера",
+        "fr": "Ajout de l'état media.setText pour envoyer du texte au clavier virtuel du lecteur",
+        "it": "Aggiunto stato media.setText per inviare testo alla tastiera virtuale del player",
+        "es": "Añadido estado media.setText para enviar texto al teclado virtual del reproductor",
+        "pl": "Dodano stan media.setText do wysyłania tekstu na klawiaturę ekranową odtwarzacza",
+        "pt": "Adicionado estado media.setText para enviar texto para o teclado virtual do leitor",
+        "nl": "media.setText state toegevoegd om tekst naar het schermtoetsenbord van de speler te sturen",
+        "uk": "Додано стан media.setText для надсилання тексту на екранну клавіатуру плеєра",
+        "zh-cn": "添加media.setText状态以向播放器屏幕键盘发送文本"
+      },
       "1.0.3": {
         "en": "PWA: disabled double-tap zoom on buttons (iOS)",
         "de": "PWA: Doppeltipp-Zoom auf Schaltflächen deaktiviert (iOS)",

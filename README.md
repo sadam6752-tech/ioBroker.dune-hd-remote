@@ -87,6 +87,9 @@ The URL is also stored in the `info.pwaUrl` state.
 
 ## Changelog
 
+### 1.0.4
+- Added `media.setText` state to send text to player on-screen keyboard from ioBroker
+
 ### 1.0.3
 - PWA: disabled double-tap zoom on buttons (iOS)
 

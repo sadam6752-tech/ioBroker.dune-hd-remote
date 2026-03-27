@@ -247,6 +247,12 @@ class DuneHdRemote extends utils.Adapter {
           await this.player.seek(value);
         }
         break;
+      case "setText":
+        if (value) {
+          await this.player.sendCommand("set_text", { text: value });
+          await this.setStateAsync("media.setText", { val: "", ack: true });
+        }
+        break;
     }
   }
 
@@ -543,6 +549,18 @@ class DuneHdRemote extends utils.Adapter {
         write: true,
         def: 0,
         unit: "s",
+      },
+      native: {},
+    });
+    await this.extendObjectAsync("media.setText", {
+      type: "state",
+      common: {
+        name: "Set Text (player keyboard)",
+        type: "string",
+        role: "text",
+        read: true,
+        write: true,
+        def: "",
       },
       native: {},
     });

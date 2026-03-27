@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "news": {
+      "1.0.7": {
+        "en": "Fixed missing devDependencies (manual-review, adapter-dev)",
+        "de": "Fehlende devDependencies hinzugefügt (manual-review, adapter-dev)",
+        "ru": "Исправлены отсутствующие devDependencies (manual-review, adapter-dev)",
+        "fr": "Dépendances de développement manquantes ajoutées (manual-review, adapter-dev)",
+        "it": "Dipendenze di sviluppo mancanti aggiunte (manual-review, adapter-dev)",
+        "es": "Dependencias de desarrollo faltantes añadidas (manual-review, adapter-dev)",
+        "pl": "Dodano brakujące devDependencies (manual-review, adapter-dev)",
+        "pt": "Dependências de desenvolvimento em falta adicionadas (manual-review, adapter-dev)",
+        "nl": "Ontbrekende devDependencies toegevoegd (manual-review, adapter-dev)",
+        "uk": "Виправлено відсутні devDependencies (manual-review, adapter-dev)",
+        "zh-cn": "修复缺失的devDependencies（manual-review、adapter-dev）"
+      },
       "1.0.6": {
         "en": "Fixed CI/CD workflow, updated VS Code schema definitions",
         "de": "CI/CD-Workflow korrigiert, VS Code Schema-Definitionen aktualisiert",
@@ -80,19 +93,6 @@
         "nl": "PWA: tekstinvoer voor speler-toetsenbord, Play URL-veld voor directe mediaweergave",
         "uk": "PWA: введення тексту для клавіатури плеєра, поле Play URL для прямого відтворення медіа",
         "zh-cn": "PWA：播放器键盘文本输入，Play URL字段用于直接媒体播放"
-      },
-      "1.0.0": {
-        "en": "First stable release: PWA remote control, status polling, offline detection, full i18n (11 languages)",
-        "de": "Erste stabile Version: PWA-Fernbedienung, Status-Polling, Offline-Erkennung, vollständige Übersetzungen (11 Sprachen)",
-        "ru": "Первый стабильный релиз: PWA-пульт, опрос статуса, определение офлайн, полная локализация (11 языков)",
-        "fr": "Première version stable: télécommande PWA, polling de statut, détection hors ligne, i18n complet (11 langues)",
-        "it": "Prima versione stabile: telecomando PWA, polling stato, rilevamento offline, i18n completo (11 lingue)",
-        "es": "Primera versión estable: control remoto PWA, polling de estado, detección offline, i18n completo (11 idiomas)",
-        "pl": "Pierwsza stabilna wersja: pilot PWA, odpytywanie statusu, wykrywanie offline, pełne tłumaczenia (11 języków)",
-        "pt": "Primeira versão estável: controlo remoto PWA, polling de estado, deteção offline, i18n completo (11 idiomas)",
-        "nl": "Eerste stabiele versie: PWA-afstandsbediening, statuspolling, offline-detectie, volledige vertalingen (11 talen)",
-        "uk": "Перший стабільний реліз: PWA-пульт, опит статусу, виявлення офлайн, повна локалізація (11 мов)",
-        "zh-cn": "第一个稳定版本：PWA遥控器，状态轮询，离线检测，完整国际化（11种语言）"
       }
     },
     "titleLang": {

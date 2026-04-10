@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.1.5",
+    "version": "1.2.0",
     "news": {
+      "1.2.0": {
+        "en": "Add dune-notify plugin integration: show notifications on screen during playback",
+        "de": "dune-notify Plugin-Integration: Benachrichtigungen während der Wiedergabe auf dem Bildschirm anzeigen",
+        "ru": "Интеграция плагина dune-notify: показ уведомлений на экране во время воспроизведения",
+        "fr": "Intégration du plugin dune-notify: afficher des notifications à l'écran pendant la lecture",
+        "it": "Integrazione plugin dune-notify: mostra notifiche sullo schermo durante la riproduzione",
+        "es": "Integración del plugin dune-notify: mostrar notificaciones en pantalla durante la reproducción",
+        "pl": "Integracja wtyczki dune-notify: wyświetlanie powiadomień na ekranie podczas odtwarzania",
+        "pt": "Integração do plugin dune-notify: mostrar notificações no ecrã durante a reprodução",
+        "nl": "dune-notify plugin integratie: meldingen tonen op scherm tijdens afspelen",
+        "uk": "Інтеграція плагіна dune-notify: показ сповіщень на екрані під час відтворення",
+        "zh-cn": "集成dune-notify插件：播放时在屏幕上显示通知"
+      },
       "1.1.5": {
         "en": "Fixed README: added missing changelog entries for 1.1.4",
         "de": "README korrigiert: fehlende Changelog-Einträge für 1.1.4 hinzugefügt",
@@ -158,7 +171,9 @@
     "pollingInterval": 5,
     "offlinePollingInterval": 30,
     "enablePwa": false,
-    "pwaPort": 8765
+    "pwaPort": 8765,
+    "notifyEnabled": false,
+    "notifyTimeout": 3000
   },
   "objects": [],
   "instanceObjects": [

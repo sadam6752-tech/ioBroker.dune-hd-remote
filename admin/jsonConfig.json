@@ -110,6 +110,26 @@
       "variant": "contained",
       "color": "primary",
       "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
+    },
+    "_notifyHeader": {
+      "type": "header",
+      "text": "Dune Notify Plugin",
+      "size": 3
+    },
+    "notifyEnabled": {
+      "type": "checkbox",
+      "label": "Enable Notifications (requires dune-notify plugin on player)",
+      "default": false,
+      "xs": 12, "sm": 12, "md": 6, "lg": 6, "xl": 6
+    },
+    "notifyTimeout": {
+      "type": "number",
+      "label": "Notify Request Timeout (ms)",
+      "default": 3000,
+      "min": 500,
+      "max": 10000,
+      "disabled": "!data.notifyEnabled",
+      "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2
     }
   }
 }

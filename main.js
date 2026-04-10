@@ -3,6 +3,7 @@
 const utils = require("@iobroker/adapter-core");
 const DunePlayer = require("./lib/dune-player");
 const PwaServer = require("./lib/pwa-server");
+const DuneNotify = require("./lib/dune-notify");
 
 class DuneHdRemote extends utils.Adapter {
   constructor(options = {}) {
@@ -13,6 +14,7 @@ class DuneHdRemote extends utils.Adapter {
     this._wasDisconnected = false;
     this._pollingIntervalMs = 5000;
     this._pwaServer = null;
+    this._notify = null;
 
     this.on("ready", this.onReady.bind(this));
     this.on("stateChange", this.onStateChange.bind(this));
@@ -38,6 +40,7 @@ class DuneHdRemote extends utils.Adapter {
     await this.subscribeStatesAsync("control.*");
     await this.subscribeStatesAsync("navigation.*");
     await this.subscribeStatesAsync("media.*");
+    await this.subscribeStatesAsync("notify.*");
 
     await this._updateStatus();
 
@@ -68,6 +71,17 @@ class DuneHdRemote extends utils.Adapter {
       } catch (err) {
         this.log.error(`Failed to start PWA server: ${err.message}`);
       }
+    }
+
+    // dune-notify plugin integration
+    if (this.config.notifyEnabled) {
+      this._notify = new DuneNotify({
+        playerIp: ip,
+        playerPort: port,
+        timeout: this.config.notifyTimeout || 3000,
+        log: (level, msg) => this.log[level](msg),
+      });
+      this.log.info(`Dune Notify: plugin integration enabled`);
     }
   }
 
@@ -106,6 +120,9 @@ class DuneHdRemote extends utils.Adapter {
           break;
         case "media":
           await this._handleMedia(name, state.val);
+          break;
+        case "notify":
+          await this._handleNotify(name, state.val);
           break;
       }
     } catch (err) {
@@ -251,6 +268,48 @@ class DuneHdRemote extends utils.Adapter {
         if (value) {
           await this.player.sendCommand("set_text", { text: value });
           await this.setStateAsync("media.setText", { val: "", ack: true });
+        }
+        break;
+    }
+  }
+
+  // ── Notify handler ──────────────────────────────────────────────────────
+
+  async _handleNotify(command, value) {
+    if (!this._notify) {
+      this.log.warn("Notify: dune-notify plugin not enabled in config");
+      return;
+    }
+
+    switch (command) {
+      case "send": {
+        if (!value) {
+          return;
+        }
+        // Accept plain string or JSON object
+        let params = {};
+        if (typeof value === "string") {
+          try {
+            params = JSON.parse(value);
+          } catch {
+            params = { text: value };
+          }
+        } else if (typeof value === "object") {
+          params = value;
+        }
+        const result = await this._notify.show(params);
+        await this.setStateAsync("notify.lastResult", {
+          val: result.status === "ok" ? "ok" : result.message || "error",
+          ack: true,
+        });
+        // Reset send state
+        await this.setStateAsync("notify.send", { val: "", ack: true });
+        break;
+      }
+      case "hide":
+        if (value) {
+          await this._notify.hide();
+          await this.setStateAsync("notify.hide", { val: false, ack: true });
         }
         break;
     }
@@ -782,6 +841,50 @@ class DuneHdRemote extends utils.Adapter {
         name: "PWA Remote URL",
         type: "string",
         role: "info.ip",
+        read: true,
+        write: false,
+        def: "",
+      },
+      native: {},
+    });
+
+    // notify channel
+    await this.extendObjectAsync("notify", {
+      type: "channel",
+      common: { name: "Notifications (dune-notify plugin)" },
+      native: {},
+    });
+    await this.extendObjectAsync("notify.send", {
+      type: "state",
+      common: {
+        name: "Send Notification",
+        type: "string",
+        role: "text",
+        read: true,
+        write: true,
+        def: "",
+        desc: 'Plain text or JSON: {"text":"...","title":"...","duration":5,"icon":"info"}',
+      },
+      native: {},
+    });
+    await this.extendObjectAsync("notify.hide", {
+      type: "state",
+      common: {
+        name: "Hide Notification",
+        type: "boolean",
+        role: "button",
+        read: true,
+        write: true,
+        def: false,
+      },
+      native: {},
+    });
+    await this.extendObjectAsync("notify.lastResult", {
+      type: "state",
+      common: {
+        name: "Last Notification Result",
+        type: "string",
+        role: "text",
         read: true,
         write: false,
         def: "",

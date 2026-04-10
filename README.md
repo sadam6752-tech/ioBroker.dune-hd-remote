@@ -62,6 +62,16 @@ The URL is also stored in the `info.pwaUrl` state.
 - Settings tab: dark/light theme, connection settings
 - Works as installable PWA on iOS and Android (Add to Home Screen)
 
+### Dune Notify Plugin
+
+Show notifications from ioBroker **on top of the video** during playback.  
+Requires the **dune-notify** PHP plugin installed on the player (see `dune-notify/` folder).
+
+| Field | Description |
+|---|---|
+| Enable Notifications | Enable the dune-notify integration |
+| Notify Request Timeout | HTTP request timeout in ms (default: 3000) |
+
 ## States
 
 | State | Type | Description |
@@ -84,8 +94,16 @@ The URL is also stored in the `info.pwaUrl` state.
 | `navigation.up/down/left/right/ok/back` | boolean | Navigation buttons |
 | `media.playUrl` | string | Play media from URL |
 | `media.seek` | number | Seek to position (seconds) |
+| `notify.send` | string | Send notification (text or JSON) |
+| `notify.hide` | boolean | Hide current notification |
+| `notify.lastResult` | string | Result of last notification request |
 
 ## Changelog
+
+### 1.2.0
+- Add dune-notify plugin integration: show notifications on screen during playback
+- New states: `notify.send`, `notify.hide`, `notify.lastResult`
+- New config options: `notifyEnabled`, `notifyTimeout`
 
 ### 1.1.5
 - Fixed README: added missing changelog entry for 1.1.4

@@ -6,6 +6,8 @@ updates:
       interval: cron
       cron: '0 4 * * 1'
     open-pull-requests-limit: 15
+    cooldown:
+      default: 7
 
   - package-ecosystem: github-actions
     directory: /
@@ -13,3 +15,5 @@ updates:
       interval: cron
       cron: '0 4 * * 1'
     open-pull-requests-limit: 15
+    cooldown:
+      default: 7

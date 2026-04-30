@@ -2,7 +2,9 @@
 
 ![Logo](admin/dune-hd-remote.png)
 
-Control Dune HD media players via IP network from ioBroker.
+Control [Dune HD](https://dune-hd.com/) media players via IP network from ioBroker.
+
+[Dune HD](https://dune-hd.com/) produces high-quality network media players supporting 4K HDR playback, Blu-ray, and a wide range of media formats. All Linux-based Dune HD players support IP control via HTTP API, which this adapter uses to provide full remote control from ioBroker.
 
 ## Features
 
@@ -100,6 +102,13 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 
 ## Changelog
 
+### 1.2.1
+- Fix E8915: add dependabot cooldown (7 days) to reduce supply chain risk
+- Fix deploy step: use Node.js 24 for trusted publishing compatibility
+- Remove redundant `eslint` and `prettier` devDependencies (included via `@iobroker/eslint-config`)
+- Add manufacturer link and device description to README
+- Add CHANGELOG_OLD.md for older changelog entries
+
 ### 1.2.0
 - Add dune-notify plugin integration: show notifications on screen during playback
 - New states: `notify.send`, `notify.hide`, `notify.lastResult`
@@ -123,48 +132,7 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 - Fixed prettier formatting errors in lib files
 - Added `test:integration` script for CI/CD compatibility
 
-### 1.1.0
-- Fixed CI/CD: use official ioBroker testing actions (check, adapter, deploy)
-- Updated dependabot config: added github-actions support, cron schedule, auto-merge
-
-### 1.0.9
-- Improved CI/CD workflow with official ioBroker testing actions and concurrency
-- Added dependabot for automatic dependency updates
-- Use `node:` prefix for built-in Node.js modules
-
-### 1.0.8
-- Fixed missing devDependencies (manual-review, adapter-dev) — permanent fix
-
-### 1.0.7
-- Fixed missing devDependencies (manual-review, adapter-dev)
-
-### 1.0.6
-- Fixed CI/CD workflow (required jobs, tags pattern)
-- Updated VS Code schema definitions
-
-### 1.0.5
-- Repository preparation: updated dependencies (node>=20, adapter-core 3.3.2), added CI/CD workflow, fixed repochecker issues
-
-### 1.0.4
-- Added `media.setText` state to send text to player on-screen keyboard from ioBroker
-
-### 1.0.3
-- PWA: disabled double-tap zoom on buttons (iOS)
-
-### 1.0.2
-- PWA: quick navigation shortcuts (TV, Sources, Apps, Setup, Favorites, Home)
-- PWA: improved button layout on Main tab
-
-### 1.0.1
-- PWA: text input field to send text to the player's on-screen keyboard
-- PWA: Play URL field for direct media playback from any URL
-
-### 1.0.0
-- First stable release
-- PWA remote control (Main, Digits, Settings tabs)
-- Status polling with configurable online/offline intervals
-- Smart offline detection (warn on first failure, debug on repeated)
-- Full i18n — 11 languages
+For older changelog entries see [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 
 ## License
 

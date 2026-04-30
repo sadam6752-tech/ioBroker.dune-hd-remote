@@ -1,6 +1,6 @@
 {
   "name": "iobroker.dune-hd-remote",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Control Dune HD media players via IP network",
   "author": {
     "name": "sadam6752-tech",
@@ -34,9 +34,7 @@
     "@alcalzone/release-script-plugin-iobroker": "^5.1.2",
     "@alcalzone/release-script-plugin-license": "^5.1.1",
     "@alcalzone/release-script-plugin-manual-review": "^5.1.1",
-    "@iobroker/adapter-dev": "^1.5.0",
-    "eslint": "^9.22.0",
-    "prettier": "^3.5.3"
+    "@iobroker/adapter-dev": "^1.5.0"
   },
   "main": "main.js",
   "scripts": {

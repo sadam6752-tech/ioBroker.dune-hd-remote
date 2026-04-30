@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "news": {
+      "1.2.1": {
+        "en": "Fix E8915: add dependabot cooldown; fix deploy node version to 24; remove redundant eslint/prettier devDependencies; add manufacturer link to README",
+        "de": "E8915 behoben: Dependabot-Cooldown hinzugefügt; Deploy-Node-Version auf 24 korrigiert; redundante eslint/prettier devDependencies entfernt; Hersteller-Link in README ergänzt",
+        "ru": "Исправление E8915: добавлен cooldown для dependabot; версия node для deploy исправлена на 24; удалены лишние devDependencies eslint/prettier; добавлена ссылка на производителя в README",
+        "fr": "Correction E8915: ajout du cooldown dependabot; version node deploy corrigée à 24; devDependencies eslint/prettier redondantes supprimées; lien fabricant ajouté au README",
+        "it": "Fix E8915: aggiunto cooldown dependabot; versione node deploy corretta a 24; devDependencies eslint/prettier ridondanti rimossi; link produttore aggiunto al README",
+        "es": "Fix E8915: añadido cooldown dependabot; versión node deploy corregida a 24; devDependencies eslint/prettier redundantes eliminadas; enlace fabricante añadido al README",
+        "pl": "Naprawa E8915: dodano cooldown dependabot; wersja node deploy poprawiona do 24; usunięto zbędne devDependencies eslint/prettier; dodano link producenta do README",
+        "pt": "Fix E8915: adicionado cooldown dependabot; versão node deploy corrigida para 24; devDependencies eslint/prettier redundantes removidas; link fabricante adicionado ao README",
+        "nl": "Fix E8915: dependabot cooldown toegevoegd; deploy node versie gecorrigeerd naar 24; overbodige eslint/prettier devDependencies verwijderd; fabrikantlink toegevoegd aan README",
+        "uk": "Виправлення E8915: додано cooldown для dependabot; версію node для deploy виправлено на 24; видалено зайві devDependencies eslint/prettier; додано посилання на виробника в README",
+        "zh-cn": "修复E8915：添加dependabot冷却时间；将deploy的node版本修正为24；删除多余的eslint/prettier devDependencies；在README中添加制造商链接"
+      },
       "1.2.0": {
         "en": "Add dune-notify plugin integration: show notifications on screen during playback",
         "de": "dune-notify Plugin-Integration: Benachrichtigungen während der Wiedergabe auf dem Bildschirm anzeigen",
@@ -80,19 +93,6 @@
         "nl": "CI/CD gecorrigeerd: prettier opmaak, test:integration script toegevoegd",
         "uk": "Виправлено CI/CD: форматування prettier, додано скрипт test:integration",
         "zh-cn": "修复CI/CD：prettier格式化，添加test:integration脚本"
-      },
-      "1.1.0": {
-        "en": "Fixed CI/CD: use ioBroker testing actions, updated dependabot config with github-actions support",
-        "de": "CI/CD korrigiert: ioBroker Testing Actions verwendet, Dependabot-Konfiguration mit GitHub-Actions-Support aktualisiert",
-        "ru": "Исправлен CI/CD: используются ioBroker testing actions, обновлён dependabot с поддержкой github-actions",
-        "fr": "CI/CD corrigé: utilisation des ioBroker testing actions, configuration dependabot mise à jour avec support github-actions",
-        "it": "CI/CD corretto: utilizzo ioBroker testing actions, configurazione dependabot aggiornata con supporto github-actions",
-        "es": "CI/CD corregido: uso de ioBroker testing actions, configuración dependabot actualizada con soporte github-actions",
-        "pl": "Naprawiono CI/CD: użyto ioBroker testing actions, zaktualizowano konfigurację dependabot z obsługą github-actions",
-        "pt": "CI/CD corrigido: uso de ioBroker testing actions, configuração dependabot atualizada com suporte github-actions",
-        "nl": "CI/CD gecorrigeerd: gebruik van ioBroker testing actions, dependabot configuratie bijgewerkt met github-actions ondersteuning",
-        "uk": "Виправлено CI/CD: використовуються ioBroker testing actions, оновлено dependabot з підтримкою github-actions",
-        "zh-cn": "修复CI/CD：使用ioBroker测试动作，更新dependabot配置支持github-actions"
       }
     },
     "titleLang": {

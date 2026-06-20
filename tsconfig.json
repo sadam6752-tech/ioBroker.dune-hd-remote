@@ -1,20 +1,17 @@
 {
-  "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./build",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
     "allowJs": true,
     "checkJs": true,
     "strict": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./build"
   },
-  "include": [
-    "**/*.js",
-    "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules/**",
-    "build/**",
-    "test/**",
-    "admin/**"
-  ]
+  "include": ["**/*.js", "**/*.ts"],
+  "exclude": ["node_modules/**", "build/**", "test/**", "admin/**"]
 }

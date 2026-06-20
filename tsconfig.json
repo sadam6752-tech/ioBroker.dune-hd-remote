@@ -1,14 +1,10 @@
 {
+  "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2022"],
-    "module": "CommonJS",
-    "moduleResolution": "node",
     "allowJs": true,
     "checkJs": true,
     "strict": false,
     "noImplicitAny": false,
-    "esModuleInterop": true,
     "skipLibCheck": true,
     "outDir": "./build"
   },

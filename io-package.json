@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "news": {
+      "1.2.2": {
+        "en": "Fix W5612: add missing i18n keys for notify section; add prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; update devDependencies",
+        "de": "W5612 behoben: fehlende i18n-Schlüssel für Notify-Bereich hinzugefügt; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 hinzugefügt; devDependencies aktualisiert",
+        "ru": "Исправление W5612: добавлены отсутствующие ключи i18n для раздела notify; добавлены prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; обновлены devDependencies",
+        "fr": "Fix W5612: clés i18n manquantes pour la section notify ajoutées; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 ajoutés; devDependencies mis à jour",
+        "it": "Fix W5612: chiavi i18n mancanti per sezione notify aggiunte; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 aggiunti; devDependencies aggiornati",
+        "es": "Fix W5612: claves i18n faltantes para sección notify añadidas; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 añadidos; devDependencies actualizados",
+        "pl": "Naprawa W5612: dodano brakujące klucze i18n dla sekcji notify; dodano prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; zaktualizowano devDependencies",
+        "pt": "Fix W5612: chaves i18n em falta para secção notify adicionadas; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 adicionados; devDependencies atualizados",
+        "nl": "Fix W5612: ontbrekende i18n-sleutels voor notify-sectie toegevoegd; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 toegevoegd; devDependencies bijgewerkt",
+        "uk": "Виправлення W5612: додано відсутні ключі i18n для розділу notify; додано prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; оновлено devDependencies",
+        "zh-cn": "修复W5612：为notify部分添加缺失的i18n键；添加prettier.config.mjs、tsconfig.json、@types/node、@tsconfig/node22；更新devDependencies"
+      },
       "1.2.1": {
         "en": "Fix E8915: add dependabot cooldown; fix deploy node version to 24; remove redundant eslint/prettier devDependencies; add manufacturer link to README",
         "de": "E8915 behoben: Dependabot-Cooldown hinzugefügt; Deploy-Node-Version auf 24 korrigiert; redundante eslint/prettier devDependencies entfernt; Hersteller-Link in README ergänzt",
@@ -80,19 +93,6 @@
         "nl": "node: prefix gebruikt voor ingebouwde modules (fs, http, path, url)",
         "uk": "Використовується префікс node: для вбудованих модулів (fs, http, path, url)",
         "zh-cn": "内置模块使用node:前缀（fs、http、path、url）"
-      },
-      "1.1.1": {
-        "en": "Fixed CI/CD: prettier formatting, added test:integration script",
-        "de": "CI/CD korrigiert: Prettier-Formatierung, test:integration Skript hinzugefügt",
-        "ru": "Исправлен CI/CD: форматирование prettier, добавлен скрипт test:integration",
-        "fr": "CI/CD corrigé: formatage prettier, script test:integration ajouté",
-        "it": "CI/CD corretto: formattazione prettier, script test:integration aggiunto",
-        "es": "CI/CD corregido: formato prettier, script test:integration añadido",
-        "pl": "Naprawiono CI/CD: formatowanie prettier, dodano skrypt test:integration",
-        "pt": "CI/CD corrigido: formatação prettier, script test:integration adicionado",
-        "nl": "CI/CD gecorrigeerd: prettier opmaak, test:integration script toegevoegd",
-        "uk": "Виправлено CI/CD: форматування prettier, додано скрипт test:integration",
-        "zh-cn": "修复CI/CD：prettier格式化，添加test:integration脚本"
       }
     },
     "titleLang": {

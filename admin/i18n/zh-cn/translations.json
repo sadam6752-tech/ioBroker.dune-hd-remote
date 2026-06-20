@@ -16,5 +16,8 @@
   "IP address to bind the PWA server to. Select 0.0.0.0 for all interfaces.": "PWA服务器绑定的IP地址。0.0.0.0表示所有接口。",
   "PWA Server Port": "PWA服务器端口",
   "Port for the built-in PWA web remote (default: 8765)": "内置PWA遥控器端口 (默认: 8765)",
-  "Test Connection": "测试连接"
+  "Test Connection": "测试连接",
+  "Dune Notify Plugin": "Dune通知插件",
+  "Enable Notifications (requires dune-notify plugin on player)": "启用通知（需要播放器上安装dune-notify插件）",
+  "Notify Request Timeout (ms)": "通知请求超时 (毫秒)"
 }

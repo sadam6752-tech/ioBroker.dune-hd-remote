@@ -16,5 +16,8 @@
   "IP address to bind the PWA server to. Select 0.0.0.0 for all interfaces.": "IP-adres voor de PWA-server. 0.0.0.0 voor alle interfaces.",
   "PWA Server Port": "PWA-serverpoort",
   "Port for the built-in PWA web remote (default: 8765)": "Poort voor de ingebouwde PWA-afstandsbediening (standaard: 8765)",
-  "Test Connection": "Verbinding testen"
+  "Test Connection": "Verbinding testen",
+  "Dune Notify Plugin": "Dune Notify Plugin",
+  "Enable Notifications (requires dune-notify plugin on player)": "Meldingen inschakelen (vereist de dune-notify plugin op de speler)",
+  "Notify Request Timeout (ms)": "Time-out meldingenverzoek (ms)"
 }

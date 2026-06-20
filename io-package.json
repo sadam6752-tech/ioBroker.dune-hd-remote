@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "news": {
+      "1.2.3": {
+        "en": "Fix W0066: downgrade @types/node to >=22 <23; add extends to tsconfig.json; add 1.2.2 changelog to README",
+        "de": "@types/node auf >=22 <23 heruntergestuft; extends in tsconfig.json hinzugefügt; 1.2.2 Changelog in README ergänzt",
+        "ru": "Понижена версия @types/node до >=22 <23; добавлен extends в tsconfig.json; добавлен changelog 1.2.2 в README",
+        "fr": "Rétrogradation de @types/node à >=22 <23; extends ajouté dans tsconfig.json; changelog 1.2.2 ajouté au README",
+        "it": "@types/node declassato a >=22 <23; extends aggiunto in tsconfig.json; changelog 1.2.2 aggiunto al README",
+        "es": "@types/node degradado a >=22 <23; extends añadido en tsconfig.json; changelog 1.2.2 añadido al README",
+        "pl": "@types/node obniżono do >=22 <23; dodano extends w tsconfig.json; dodano changelog 1.2.2 do README",
+        "pt": "@types/node rebaixado para >=22 <23; extends adicionado em tsconfig.json; changelog 1.2.2 adicionado ao README",
+        "nl": "@types/node teruggebracht naar >=22 <23; extends toegevoegd in tsconfig.json; changelog 1.2.2 toegevoegd aan README",
+        "uk": "Знижено версію @types/node до >=22 <23; додано extends у tsconfig.json; додано changelog 1.2.2 до README",
+        "zh-cn": "将@types/node降级至>=22 <23；在tsconfig.json中添加extends；在README中添加1.2.2 changelog"
+      },
       "1.2.2": {
         "en": "Fix W5612: add missing i18n keys for notify section; add prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; update devDependencies",
         "de": "W5612 behoben: fehlende i18n-Schlüssel für Notify-Bereich hinzugefügt; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 hinzugefügt; devDependencies aktualisiert",
@@ -80,19 +93,6 @@
         "nl": "Standaard workflow en testscripts van create-adapter gebruikt",
         "uk": "Використовуються стандартні workflow та тестові скрипти з create-adapter",
         "zh-cn": "使用create-adapter提供的标准工作流和测试脚本"
-      },
-      "1.1.2": {
-        "en": "Use node: prefix for built-in modules (fs, http, path, url)",
-        "de": "node:-Präfix für eingebaute Module verwendet (fs, http, path, url)",
-        "ru": "Используется префикс node: для встроенных модулей (fs, http, path, url)",
-        "fr": "Utilisation du préfixe node: pour les modules intégrés (fs, http, path, url)",
-        "it": "Utilizzo del prefisso node: per i moduli integrati (fs, http, path, url)",
-        "es": "Uso del prefijo node: para módulos integrados (fs, http, path, url)",
-        "pl": "Użyto prefiksu node: dla wbudowanych modułów (fs, http, path, url)",
-        "pt": "Uso do prefixo node: para módulos integrados (fs, http, path, url)",
-        "nl": "node: prefix gebruikt voor ingebouwde modules (fs, http, path, url)",
-        "uk": "Використовується префікс node: для вбудованих модулів (fs, http, path, url)",
-        "zh-cn": "内置模块使用node:前缀（fs、http、path、url）"
       }
     },
     "titleLang": {

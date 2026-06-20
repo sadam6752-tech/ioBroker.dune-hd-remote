@@ -105,6 +105,11 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 ### **WORK IN PROGRESS**
 - (copilot) Adapter requires node.js >= 22 now
 
+### 1.2.3
+- Fix W0066: downgrade @types/node to >=22 <23
+- Add extends clause to tsconfig.json (@tsconfig/node22)
+- Add 1.2.2 changelog entry to README
+
 ### 1.2.2
 - Fix W5612: add missing i18n keys for notify section (all 11 languages)
 - Add prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22

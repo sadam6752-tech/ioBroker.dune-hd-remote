@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "news": {
+      "1.2.5": {
+        "en": "Migrate i18n to short format ({lang}.json); update adapter-core range to ^3.4.3 in package.json",
+        "de": "i18n auf Kurzformat ({lang}.json) migriert; adapter-core Range auf ^3.4.3 in package.json aktualisiert",
+        "ru": "Миграция i18n на короткий формат ({lang}.json); обновлён диапазон adapter-core до ^3.4.3 в package.json",
+        "fr": "Migration i18n vers format court ({lang}.json); plage adapter-core mise à jour vers ^3.4.3 dans package.json",
+        "it": "Migrazione i18n a formato breve ({lang}.json); range adapter-core aggiornato a ^3.4.3 in package.json",
+        "es": "Migración i18n a formato corto ({lang}.json); rango adapter-core actualizado a ^3.4.3 en package.json",
+        "pl": "Migracja i18n do krótkiego formatu ({lang}.json); zakres adapter-core zaktualizowano do ^3.4.3 w package.json",
+        "pt": "Migração i18n para formato curto ({lang}.json); intervalo adapter-core atualizado para ^3.4.3 em package.json",
+        "nl": "i18n gemigreerd naar kort formaat ({lang}.json); adapter-core range bijgewerkt naar ^3.4.3 in package.json",
+        "uk": "Міграція i18n на короткий формат ({lang}.json); оновлено діапазон adapter-core до ^3.4.3 в package.json",
+        "zh-cn": "将i18n迁移到短格式（{lang}.json）；将package.json中的adapter-core范围更新为^3.4.3"
+      },
       "1.2.4": {
         "en": "Update @iobroker/adapter-core to 3.4.3",
         "de": "@iobroker/adapter-core auf 3.4.3 aktualisiert",
@@ -80,19 +93,6 @@
         "nl": "README gecorrigeerd: ontbrekende changelog-vermeldingen voor 1.1.4 toegevoegd",
         "uk": "Виправлено README: додано відсутні записи changelog для 1.1.4",
         "zh-cn": "修复README：添加1.1.4缺失的changelog条目"
-      },
-      "1.1.4": {
-        "en": "Fixed README changelog, added needs: check-and-lint to adapter-tests job",
-        "de": "README Changelog korrigiert, needs: check-and-lint zu adapter-tests Job hinzugefügt",
-        "ru": "Исправлен changelog в README, добавлен needs: check-and-lint в job adapter-tests",
-        "fr": "Changelog README corrigé, needs: check-and-lint ajouté au job adapter-tests",
-        "it": "Changelog README corretto, needs: check-and-lint aggiunto al job adapter-tests",
-        "es": "Changelog README corregido, needs: check-and-lint añadido al job adapter-tests",
-        "pl": "Naprawiono changelog README, dodano needs: check-and-lint do job adapter-tests",
-        "pt": "Changelog README corrigido, needs: check-and-lint adicionado ao job adapter-tests",
-        "nl": "README changelog gecorrigeerd, needs: check-and-lint toegevoegd aan adapter-tests job",
-        "uk": "Виправлено changelog README, додано needs: check-and-lint до job adapter-tests",
-        "zh-cn": "修复README changelog，为adapter-tests job添加needs: check-and-lint"
       }
     },
     "titleLang": {

@@ -48,8 +48,29 @@ jobs:
           node-version: ${{ matrix.node-version }}
           os: ${{ matrix.os }}
 
-# NOTE: Automatic npm deployment is intentionally disabled.
-# Releases to npm are published manually (npm publish).
-# To re-enable automatic releases, create an npm token, add it as the
-# GitHub secret NPM_TOKEN and restore a deploy job that uses
-# ioBroker/testing-action-deploy@v1 with npm-token: ${{ secrets.NPM_TOKEN }}.
+  # Deploys the package to npm and creates the GitHub release when a version tag is pushed.
+  # Publishing uses npm "Trusted Publishing" (OIDC); configure it for iobroker.dune-hd-remote at
+  # https://www.npmjs.com/package/iobroker.dune-hd-remote/access (no npm token required).
+  deploy:
+    needs: [check-and-lint, adapter-tests]
+
+    # Trigger this step only when a commit on any branch is tagged with a version number
+    if: |
+      contains(github.event.head_commit.message, '[skip ci]') == false &&
+      github.event_name == 'push' &&
+      startsWith(github.ref, 'refs/tags/v')
+
+    runs-on: ubuntu-latest
+
+    # Write permissions are required to create the GitHub release
+    permissions:
+      id-token: write
+      contents: write
+
+    steps:
+      - uses: ioBroker/testing-action-deploy@v1
+        with:
+          node-version: '24.x'
+          # NOTE: No npm-token on purpose - publishing uses OIDC/Trusted Publishing and adds
+          # the provenance attestation automatically.
+          github-token: ${{ secrets.GITHUB_TOKEN }}

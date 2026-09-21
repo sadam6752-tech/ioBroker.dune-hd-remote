@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "news": {
+      "1.2.7": {
+        "en": "Repository checker fixes: added the missing README changelog entry for 1.2.6, the complete MIT license text in the README and a valid copyright line in the LICENSE file. CI: new deploy job using npm Trusted Publishing (OIDC) with provenance - releases are published automatically from now on. @iobroker/testing 6.2.x.",
+        "de": "Repository-Checker-Korrekturen: fehlender README-Changelog-Eintrag fuer 1.2.6 ergaenzt, vollstaendiger MIT-Lizenztext im README und gueltige Copyright-Zeile in der LICENSE-Datei. CI: neuer Deploy-Job mit npm Trusted Publishing (OIDC) samt Provenance - Releases werden ab jetzt automatisch veroeffentlicht. @iobroker/testing 6.2.x.",
+        "ru": "Исправления по repository checker: добавлена отсутствующая запись чейнджлога README для 1.2.6, полный текст лицензии MIT в README и корректная строка копирайта в файле LICENSE. CI: добавлен job deploy с npm Trusted Publishing (OIDC) и provenance - релизы теперь публикуются автоматически. @iobroker/testing 6.2.x.",
+        "fr": "Corrections du repository checker : entree de changelog manquante pour 1.2.6 ajoutee dans le README, texte complet de la licence MIT dans le README et ligne de copyright valide dans le fichier LICENSE. CI : job deploy avec npm Trusted Publishing (OIDC) et provenance ajoute - les versions sont desormais publiees automatiquement. @iobroker/testing 6.2.x.",
+        "it": "Correzioni del repository checker: aggiunta la voce di changelog mancante per 1.2.6 nel README, testo completo della licenza MIT nel README e riga di copyright valida nel file LICENSE. CI: aggiunto job deploy con npm Trusted Publishing (OIDC) e provenance - le release vengono ora pubblicate automaticamente. @iobroker/testing 6.2.x.",
+        "es": "Correcciones del repository checker: anadida la entrada de changelog que faltaba para 1.2.6 en el README, texto completo de la licencia MIT en el README y linea de copyright valida en el archivo LICENSE. CI: anadido job deploy con npm Trusted Publishing (OIDC) y provenance - las versiones ahora se publican automaticamente. @iobroker/testing 6.2.x.",
+        "pl": "Poprawki repository checkera: dodano brakujacy wpis changeloga dla 1.2.6 w README, pelny tekst licencji MIT w README i poprawna linie praw autorskich w pliku LICENSE. CI: dodano job deploy z npm Trusted Publishing (OIDC) i provenance - wersje sa teraz publikowane automatycznie. @iobroker/testing 6.2.x.",
+        "pt": "Correcoes do repository checker: adicionada a entrada de changelog em falta para 1.2.6 no README, texto completo da licenca MIT no README e linha de copyright valida no ficheiro LICENSE. CI: adicionado job deploy com npm Trusted Publishing (OIDC) e provenance - as versoes passam a ser publicadas automaticamente. @iobroker/testing 6.2.x.",
+        "nl": "Repository-checker-correcties: ontbrekende changelog-regel voor 1.2.6 toegevoegd in de README, volledige MIT-licentietekst in de README en een geldige copyrightregel in het LICENSE-bestand. CI: nieuwe deploy-job met npm Trusted Publishing (OIDC) en provenance - releases worden nu automatisch gepubliceerd. @iobroker/testing 6.2.x.",
+        "uk": "Виправлення repository checker: додано відсутній запис журналу змін для 1.2.6 у README, повний текст ліцензії MIT у README та коректний рядок копірайту у файлі LICENSE. CI: додано job deploy із npm Trusted Publishing (OIDC) і provenance - релізи тепер публікуються автоматично. @iobroker/testing 6.2.x.",
+        "zh-cn": "仓库检查修复：在 README 中补充了 1.2.6 缺失的变更日志条目，加入完整的 MIT 许可证文本，并在 LICENSE 文件中添加有效的版权行。CI：新增使用 npm Trusted Publishing (OIDC) 的 deploy 作业（含 provenance），此后版本将自动发布。@iobroker/testing 6.2.x。"
+      },
       "1.2.6": {
         "en": "Fix W0066: pin @types/node to >=22 <23 (was ^26); update @alcalzone/release-script-plugin-license to 5.2.2 (S0064)",
         "de": "W0066 behoben: @types/node auf >=22 <23 festgelegt (war ^26); @alcalzone/release-script-plugin-license auf 5.2.2 aktualisiert (S0064)",
@@ -80,19 +93,6 @@
         "nl": "Fix E8915: dependabot cooldown toegevoegd; deploy node versie gecorrigeerd naar 24; overbodige eslint/prettier devDependencies verwijderd; fabrikantlink toegevoegd aan README",
         "uk": "Виправлення E8915: додано cooldown для dependabot; версію node для deploy виправлено на 24; видалено зайві devDependencies eslint/prettier; додано посилання на виробника в README",
         "zh-cn": "修复E8915：添加dependabot冷却时间；将deploy的node版本修正为24；删除多余的eslint/prettier devDependencies；在README中添加制造商链接"
-      },
-      "1.2.0": {
-        "en": "Add dune-notify plugin integration: show notifications on screen during playback",
-        "de": "dune-notify Plugin-Integration: Benachrichtigungen während der Wiedergabe auf dem Bildschirm anzeigen",
-        "ru": "Интеграция плагина dune-notify: показ уведомлений на экране во время воспроизведения",
-        "fr": "Intégration du plugin dune-notify: afficher des notifications à l'écran pendant la lecture",
-        "it": "Integrazione plugin dune-notify: mostra notifiche sullo schermo durante la riproduzione",
-        "es": "Integración del plugin dune-notify: mostrar notificaciones en pantalla durante la reproducción",
-        "pl": "Integracja wtyczki dune-notify: wyświetlanie powiadomień na ekranie podczas odtwarzania",
-        "pt": "Integração do plugin dune-notify: mostrar notificações no ecrã durante a reprodução",
-        "nl": "dune-notify plugin integratie: meldingen tonen op scherm tijdens afspelen",
-        "uk": "Інтеграція плагіна dune-notify: показ сповіщень на екрані під час відтворення",
-        "zh-cn": "集成dune-notify插件：播放时在屏幕上显示通知"
       }
     },
     "titleLang": {

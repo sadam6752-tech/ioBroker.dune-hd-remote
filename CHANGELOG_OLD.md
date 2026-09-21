@@ -1,5 +1,8 @@
 # Older Changelog
 
+### 1.2.0
+- Add dune-notify plugin integration: show notifications on screen during playback
+
 ### 1.1.5
 - Fixed README: added missing changelog entry for 1.1.4
 

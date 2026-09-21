@@ -1,6 +1,6 @@
 {
   "name": "iobroker.dune-hd-remote",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Control Dune HD media players via IP network",
   "author": {
     "name": "sadam6752-tech",
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sadam6752-tech/ioBroker.dune-hd-remote"
+    "url": "git+https://github.com/sadam6752-tech/ioBroker.dune-hd-remote.git"
   },
   "engines": {
     "node": ">=22"

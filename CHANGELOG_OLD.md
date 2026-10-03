@@ -1,5 +1,12 @@
 # Older Changelog
 
+### 1.2.1
+- Fix E8915: add dependabot cooldown (7 days) to reduce supply chain risk
+- Fix deploy step: use Node.js 24 for trusted publishing compatibility
+- Remove redundant `eslint` and `prettier` devDependencies (included via `@iobroker/eslint-config`)
+- Add manufacturer link and device description to README
+- Add CHANGELOG_OLD.md for older changelog entries
+
 ### 1.2.0
 - Add dune-notify plugin integration: show notifications on screen during playback
 

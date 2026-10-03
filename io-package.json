@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "news": {
+      "1.2.8": {
+        "en": "New: link to the PWA remote control next to the instance in the admin Instances tab.",
+        "de": "Neu: Link zur PWA-Fernbedienung neben der Instanz im Admin-Tab Instanzen.",
+        "ru": "Новое: ссылка на PWA-пульт рядом с инстансом на вкладке «Экземпляры» в админке.",
+        "fr": "Nouveau : lien vers la telecommande PWA a cote de l'instance dans l'onglet Instances de l'admin.",
+        "it": "Novita: link al telecomando PWA accanto all'istanza nella scheda Istanze dell'admin.",
+        "es": "Novedad: enlace al mando PWA junto a la instancia en la pestana Instancias del admin.",
+        "pl": "Nowosc: link do pilota PWA obok instancji w zakladce Instancje w panelu admin.",
+        "pt": "Novo: link para o controle remoto PWA ao lado da instancia na aba Instancias do admin.",
+        "nl": "Nieuw: link naar de PWA-afstandsbediening naast de instantie op het tabblad Instanties in admin.",
+        "uk": "Нове: посилання на PWA-пульт поруч з інстансом на вкладці «Екземпляри» в адмінці.",
+        "zh-cn": "新增：在管理界面“实例”选项卡中实例旁边添加 PWA 遥控器链接。"
+      },
       "1.2.7": {
         "en": "Repository checker fixes: added the missing README changelog entry for 1.2.6, the complete MIT license text in the README and a valid copyright line in the LICENSE file. CI: new deploy job using npm Trusted Publishing (OIDC) with provenance - releases are published automatically from now on. @iobroker/testing 6.2.x.",
         "de": "Repository-Checker-Korrekturen: fehlender README-Changelog-Eintrag fuer 1.2.6 ergaenzt, vollstaendiger MIT-Lizenztext im README und gueltige Copyright-Zeile in der LICENSE-Datei. CI: neuer Deploy-Job mit npm Trusted Publishing (OIDC) samt Provenance - Releases werden ab jetzt automatisch veroeffentlicht. @iobroker/testing 6.2.x.",
@@ -80,19 +93,6 @@
         "nl": "Fix W5612: ontbrekende i18n-sleutels voor notify-sectie toegevoegd; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 toegevoegd; devDependencies bijgewerkt",
         "uk": "Виправлення W5612: додано відсутні ключі i18n для розділу notify; додано prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; оновлено devDependencies",
         "zh-cn": "修复W5612：为notify部分添加缺失的i18n键；添加prettier.config.mjs、tsconfig.json、@types/node、@tsconfig/node22；更新devDependencies"
-      },
-      "1.2.1": {
-        "en": "Fix E8915: add dependabot cooldown; fix deploy node version to 24; remove redundant eslint/prettier devDependencies; add manufacturer link to README",
-        "de": "E8915 behoben: Dependabot-Cooldown hinzugefügt; Deploy-Node-Version auf 24 korrigiert; redundante eslint/prettier devDependencies entfernt; Hersteller-Link in README ergänzt",
-        "ru": "Исправление E8915: добавлен cooldown для dependabot; версия node для deploy исправлена на 24; удалены лишние devDependencies eslint/prettier; добавлена ссылка на производителя в README",
-        "fr": "Correction E8915: ajout du cooldown dependabot; version node deploy corrigée à 24; devDependencies eslint/prettier redondantes supprimées; lien fabricant ajouté au README",
-        "it": "Fix E8915: aggiunto cooldown dependabot; versione node deploy corretta a 24; devDependencies eslint/prettier ridondanti rimossi; link produttore aggiunto al README",
-        "es": "Fix E8915: añadido cooldown dependabot; versión node deploy corregida a 24; devDependencies eslint/prettier redundantes eliminadas; enlace fabricante añadido al README",
-        "pl": "Naprawa E8915: dodano cooldown dependabot; wersja node deploy poprawiona do 24; usunięto zbędne devDependencies eslint/prettier; dodano link producenta do README",
-        "pt": "Fix E8915: adicionado cooldown dependabot; versão node deploy corrigida para 24; devDependencies eslint/prettier redundantes removidas; link fabricante adicionado ao README",
-        "nl": "Fix E8915: dependabot cooldown toegevoegd; deploy node versie gecorrigeerd naar 24; overbodige eslint/prettier devDependencies verwijderd; fabrikantlink toegevoegd aan README",
-        "uk": "Виправлення E8915: додано cooldown для dependabot; версію node для deploy виправлено на 24; видалено зайві devDependencies eslint/prettier; додано посилання на виробника в README",
-        "zh-cn": "修复E8915：添加dependabot冷却时间；将deploy的node版本修正为24；删除多余的eslint/prettier devDependencies；在README中添加制造商链接"
       }
     },
     "titleLang": {
@@ -132,6 +132,25 @@
       "remote",
       "ip"
     ],
+    "localLinks": {
+      "_default": {
+        "link": "http://%ip%:%native_pwaPort%/",
+        "name": {
+          "en": "Open PWA Remote",
+          "de": "PWA-Fernbedienung oeffnen",
+          "ru": "Открыть PWA-пульт",
+          "pt": "Abrir controle remoto PWA",
+          "nl": "PWA-afstandsbediening openen",
+          "fr": "Ouvrir la telecommande PWA",
+          "it": "Apri telecomando PWA",
+          "es": "Abrir mando PWA",
+          "pl": "Otworz pilota PWA",
+          "uk": "Відкрити PWA-пульт",
+          "zh-cn": "打开 PWA 遥控器"
+        },
+        "order": 5
+      }
+    },
     "licenseInformation": {
       "license": "MIT",
       "type": "free"

@@ -23,6 +23,9 @@ class DuneHdRemote extends utils.Adapter {
     }
 
     async onReady() {
+        // Create the object tree first, so it exists even before the player is configured
+        await this._createObjects();
+
         const ip = this.config.playerIP;
         if (!ip) {
             this.log.error('Player IP not configured!');
@@ -36,7 +39,6 @@ class DuneHdRemote extends utils.Adapter {
         this.player = new DunePlayer(ip, port, timeout);
         this.log.info(`Dune HD Remote: connecting to ${ip}:${port}`);
 
-        await this._createObjects();
         await this.subscribeStatesAsync('control.*');
         await this.subscribeStatesAsync('navigation.*');
         await this.subscribeStatesAsync('media.*');

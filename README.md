@@ -1,6 +1,15 @@
+![Logo](admin/dune-hd-remote.png)
+
 # ioBroker.dune-hd-remote
 
-![Logo](admin/dune-hd-remote.png)
+[![NPM version](https://img.shields.io/npm/v/iobroker.dune-hd-remote.svg)](https://www.npmjs.com/package/iobroker.dune-hd-remote)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.dune-hd-remote.svg)](https://www.npmjs.com/package/iobroker.dune-hd-remote)
+[![License](https://img.shields.io/github/license/sadam6752-tech/ioBroker.dune-hd-remote.svg)](LICENSE)
+![Number of Installations](https://iobroker.live/badges/dune-hd-remote-installed.svg)
+
+[![NPM](https://nodei.co/npm/iobroker.dune-hd-remote.png?downloads=true)](https://nodei.co/npm/iobroker.dune-hd-remote/)
+
+[![Test and Release](https://github.com/sadam6752-tech/ioBroker.dune-hd-remote/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/sadam6752-tech/ioBroker.dune-hd-remote/actions/workflows/test-and-release.yml)
 
 Control [Dune HD](https://dune-hd.com/) media players via IP network from ioBroker.
 
@@ -55,6 +64,7 @@ Enable the built-in web remote to control the player from any browser or mobile 
 
 After enabling, open `http://<iobroker-host>:8765/` in your browser.  
 The URL is also stored in the `info.pwaUrl` state.
+The admin also shows a link to the remote next to the instance in the **Instances** tab. The admin always shows this link, so it only works while the PWA remote is enabled.
 
 **PWA features:**
 - Main tab: D-pad, playback controls, volume, seek
@@ -102,6 +112,13 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 
 ## Changelog
 
+### 1.2.11
+- Fix a crash of the adapter when the player did not answer a PWA request in time (the timeout answered the request twice)
+- Replace the deprecated `url.parse()` in the PWA server by the WHATWG `URL` API
+- Create the object tree also when no player IP is configured yet
+- README: badge block, changelog trimmed to the last five versions
+- Update transitive dependencies in the lock file (`npm audit fix`)
+
 ### 1.2.10
 - Fix the "Test Connection" button: enable messagebox, use the current form values (useNative) and the same status request as the polling
 
@@ -116,59 +133,6 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 - Fix E6029/W6030: add the missing changelog entry for 1.2.6
 - Fix W6034: complete MIT license text in the README
 - CI: Node.js 26 in the test matrix and a new deploy job using npm Trusted Publishing (OIDC) with provenance
-
-### 1.2.6
-- Fix W0066: pin @types/node to >=22 <23 (was ^26)
-- Update @alcalzone/release-script-plugin-license to 5.2.2 (S0064)
-- Update @iobroker/testing to 6.2.x (S0064)
-
-### 1.2.5
-- Migrate i18n to short format ({lang}.json)
-- Update adapter-core range to ^3.4.3 in package.json
-
-### 1.2.4
-- Update @iobroker/adapter-core to 3.4.3
-
-### 1.2.3
-- Fix W0066: downgrade @types/node to >=22 <23
-- Add extends clause to tsconfig.json (@tsconfig/node22)
-- Add 1.2.2 changelog entry to README
-
-### 1.2.2
-- Fix W5612: add missing i18n keys for notify section (all 11 languages)
-- Add prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22
-- Update devDependencies (eslint-config 2.3.4, release-script 5.2.1)
-- Fix jsdoc types in lib files
-
-### 1.2.1
-- Fix E8915: add dependabot cooldown (7 days) to reduce supply chain risk
-- Fix deploy step: use Node.js 24 for trusted publishing compatibility
-- Remove redundant `eslint` and `prettier` devDependencies (included via `@iobroker/eslint-config`)
-- Add manufacturer link and device description to README
-- Add CHANGELOG_OLD.md for older changelog entries
-
-### 1.2.0
-- Add dune-notify plugin integration: show notifications on screen during playback
-- New states: `notify.send`, `notify.hide`, `notify.lastResult`
-- New config options: `notifyEnabled`, `notifyTimeout`
-
-### 1.1.5
-- Fixed README: added missing changelog entry for 1.1.4
-
-### 1.1.4
-- Fixed README changelog (E6006), added `needs: check-and-lint` to adapter-tests job (S3014)
-
-### 1.1.3
-- Use standard workflow and testing scripts as provided by create-adapter
-- Added `needs: check-and-lint` to adapter-tests job
-- Restructured test directory to match ioBroker.example template
-
-### 1.1.2
-- Use `node:` prefix for all built-in Node.js modules (fs, http, path, url)
-
-### 1.1.1
-- Fixed prettier formatting errors in lib files
-- Added `test:integration` script for CI/CD compatibility
 
 For older changelog entries see [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 

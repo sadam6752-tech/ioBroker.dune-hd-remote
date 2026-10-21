@@ -1,5 +1,17 @@
 # Older Changelog
 
+### 1.2.6
+- Fix W0066: pin @types/node to >=22 <23 (was ^26)
+- Update @alcalzone/release-script-plugin-license to 5.2.2 (S0064)
+- Update @iobroker/testing to 6.2.x (S0064)
+
+### 1.2.5
+- Migrate i18n to short format ({lang}.json)
+- Update adapter-core range to ^3.4.3 in package.json
+
+### 1.2.4
+- Update @iobroker/adapter-core to 3.4.3
+
 ### 1.2.3
 - Fix W0066: downgrade @types/node to >=22 <23
 - Add extends clause to tsconfig.json (@tsconfig/node22)

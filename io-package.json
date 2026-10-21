@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.10",
+    "version": "1.2.11",
     "news": {
+      "1.2.11": {
+        "en": "Fix: the adapter no longer crashes when the player does not answer a request of the PWA remote in time. The object tree is now created even if no player IP is configured. Maintenance: modern URL API in the PWA server, updated dependencies, README with badges.",
+        "de": "Fix: Der Adapter stürzt nicht mehr ab, wenn der Player eine Anfrage der PWA-Fernbedienung nicht rechtzeitig beantwortet. Der Objektbaum wird jetzt auch ohne konfigurierte Player-IP angelegt. Wartung: moderne URL-API im PWA-Server, aktualisierte Abhängigkeiten, README mit Badges.",
+        "ru": "Исправление: адаптер больше не падает, если плеер не отвечает вовремя на запрос PWA-пульта. Дерево объектов теперь создаётся даже без настроенного IP плеера. Обслуживание: современный URL API в PWA-сервере, обновлённые зависимости, README с бейджами.",
+        "fr": "Correction : l'adaptateur ne plante plus lorsque le lecteur ne répond pas à temps à une requête de la télécommande PWA. L'arborescence des objets est désormais créée même sans adresse IP du lecteur configurée. Maintenance : API URL moderne dans le serveur PWA, dépendances mises à jour, README avec badges.",
+        "it": "Correzione: l'adattatore non si arresta più quando il lettore non risponde in tempo a una richiesta del telecomando PWA. L'albero degli oggetti viene ora creato anche senza IP del lettore configurato. Manutenzione: API URL moderna nel server PWA, dipendenze aggiornate, README con badge.",
+        "es": "Corrección: el adaptador ya no se bloquea cuando el reproductor no responde a tiempo a una solicitud del mando PWA. El árbol de objetos se crea ahora aunque no haya IP del reproductor configurada. Mantenimiento: API URL moderna en el servidor PWA, dependencias actualizadas, README con insignias.",
+        "pl": "Poprawka: adapter nie ulega już awarii, gdy odtwarzacz nie odpowie na czas na żądanie pilota PWA. Drzewo obiektów jest teraz tworzone także bez skonfigurowanego adresu IP odtwarzacza. Konserwacja: nowoczesne API URL w serwerze PWA, zaktualizowane zależności, README z odznakami.",
+        "pt": "Correção: o adaptador já não falha quando o leitor não responde a tempo a um pedido do controlo remoto PWA. A árvore de objetos é agora criada mesmo sem IP do leitor configurado. Manutenção: API URL moderna no servidor PWA, dependências atualizadas, README com emblemas.",
+        "nl": "Fix: de adapter crasht niet meer wanneer de speler niet op tijd antwoordt op een verzoek van de PWA-afstandsbediening. De objectboom wordt nu ook aangemaakt als er geen IP-adres van de speler is ingesteld. Onderhoud: moderne URL-API in de PWA-server, bijgewerkte afhankelijkheden, README met badges.",
+        "uk": "Виправлення: адаптер більше не падає, якщо плеєр не відповідає вчасно на запит PWA-пульта. Дерево об'єктів тепер створюється навіть без налаштованої IP-адреси плеєра. Обслуговування: сучасний URL API у PWA-сервері, оновлені залежності, README зі значками.",
+        "zh-cn": "修复：当播放器未及时响应 PWA 遥控器的请求时，适配器不再崩溃。即使未配置播放器 IP，现在也会创建对象树。维护：PWA 服务器使用现代 URL API，更新依赖项，README 添加徽章。"
+      },
       "1.2.10": {
         "en": "Fix: the \"Test Connection\" button in the admin now works (adapter receives messages from the admin, uses the current form values and the same status request as the polling).",
         "de": "Fix: Der Button \"Verbindung testen\" in der Admin-Oberfläche funktioniert jetzt (Adapter empfängt Nachrichten vom Admin, nutzt die aktuellen Formularwerte und dieselbe Statusabfrage wie das Polling).",
@@ -80,19 +93,6 @@
         "nl": "i18n gemigreerd naar kort formaat ({lang}.json); adapter-core range bijgewerkt naar ^3.4.3 in package.json",
         "uk": "Міграція i18n на короткий формат ({lang}.json); оновлено діапазон adapter-core до ^3.4.3 в package.json",
         "zh-cn": "将i18n迁移到短格式（{lang}.json）；将package.json中的adapter-core范围更新为^3.4.3"
-      },
-      "1.2.4": {
-        "en": "Update @iobroker/adapter-core to 3.4.3",
-        "de": "@iobroker/adapter-core auf 3.4.3 aktualisiert",
-        "ru": "Обновлён @iobroker/adapter-core до 3.4.3",
-        "fr": "Mise à jour de @iobroker/adapter-core vers 3.4.3",
-        "it": "Aggiornamento @iobroker/adapter-core a 3.4.3",
-        "es": "Actualización de @iobroker/adapter-core a 3.4.3",
-        "pl": "Aktualizacja @iobroker/adapter-core do 3.4.3",
-        "pt": "Atualização do @iobroker/adapter-core para 3.4.3",
-        "nl": "@iobroker/adapter-core bijgewerkt naar 3.4.3",
-        "uk": "Оновлено @iobroker/adapter-core до 3.4.3",
-        "zh-cn": "更新 @iobroker/adapter-core 至 3.4.3"
       }
     },
     "titleLang": {

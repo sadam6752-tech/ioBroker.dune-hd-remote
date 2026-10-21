@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.8",
+    "version": "1.2.9",
     "news": {
+      "1.2.9": {
+        "en": "Fix: the \"Test Connection\" button in the admin now uses the values currently entered in the form and shows a proper success or error message.",
+        "de": "Fix: Der Button \"Verbindung testen\" in der Admin-Oberfläche verwendet jetzt die aktuell eingegebenen Formularwerte und zeigt eine korrekte Erfolgs- oder Fehlermeldung an.",
+        "ru": "Исправление: кнопка «Проверить соединение» в админке теперь использует значения, введённые в форме, и показывает корректное сообщение об успехе или ошибке.",
+        "fr": "Correction : le bouton « Tester la connexion » de l'admin utilise maintenant les valeurs saisies dans le formulaire et affiche un message de succès ou d'erreur correct.",
+        "it": "Correzione: il pulsante \"Test connessione\" nell'admin ora usa i valori inseriti nel modulo e mostra un messaggio corretto di successo o errore.",
+        "es": "Corrección: el botón \"Probar conexión\" del admin ahora usa los valores introducidos en el formulario y muestra un mensaje correcto de éxito o error.",
+        "pl": "Poprawka: przycisk \"Testuj połączenie\" w panelu admin używa teraz wartości wpisanych w formularzu i wyświetla poprawny komunikat o sukcesie lub błędzie.",
+        "pt": "Correção: o botão \"Testar ligação\" no admin agora usa os valores introduzidos no formulário e mostra uma mensagem correta de sucesso ou erro.",
+        "nl": "Fix: de knop \"Verbinding testen\" in admin gebruikt nu de ingevoerde formulierwaarden en toont een juiste succes- of foutmelding.",
+        "uk": "Виправлення: кнопка «Перевірити з'єднання» в адмінці тепер використовує значення, введені у формі, і показує коректне повідомлення про успіх або помилку.",
+        "zh-cn": "修复：管理界面中的“测试连接”按钮现在使用表单中当前输入的值，并显示正确的成功或错误消息。"
+      },
       "1.2.8": {
         "en": "New: link to the PWA remote control next to the instance in the admin Instances tab.",
         "de": "Neu: Link zur PWA-Fernbedienung neben der Instanz im Admin-Tab Instanzen.",
@@ -80,19 +93,6 @@
         "nl": "@types/node teruggebracht naar >=22 <23; extends toegevoegd in tsconfig.json; changelog 1.2.2 toegevoegd aan README",
         "uk": "Знижено версію @types/node до >=22 <23; додано extends у tsconfig.json; додано changelog 1.2.2 до README",
         "zh-cn": "将@types/node降级至>=22 <23；在tsconfig.json中添加extends；在README中添加1.2.2 changelog"
-      },
-      "1.2.2": {
-        "en": "Fix W5612: add missing i18n keys for notify section; add prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; update devDependencies",
-        "de": "W5612 behoben: fehlende i18n-Schlüssel für Notify-Bereich hinzugefügt; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 hinzugefügt; devDependencies aktualisiert",
-        "ru": "Исправление W5612: добавлены отсутствующие ключи i18n для раздела notify; добавлены prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; обновлены devDependencies",
-        "fr": "Fix W5612: clés i18n manquantes pour la section notify ajoutées; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 ajoutés; devDependencies mis à jour",
-        "it": "Fix W5612: chiavi i18n mancanti per sezione notify aggiunte; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 aggiunti; devDependencies aggiornati",
-        "es": "Fix W5612: claves i18n faltantes para sección notify añadidas; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 añadidos; devDependencies actualizados",
-        "pl": "Naprawa W5612: dodano brakujące klucze i18n dla sekcji notify; dodano prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; zaktualizowano devDependencies",
-        "pt": "Fix W5612: chaves i18n em falta para secção notify adicionadas; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 adicionados; devDependencies atualizados",
-        "nl": "Fix W5612: ontbrekende i18n-sleutels voor notify-sectie toegevoegd; prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22 toegevoegd; devDependencies bijgewerkt",
-        "uk": "Виправлення W5612: додано відсутні ключі i18n для розділу notify; додано prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22; оновлено devDependencies",
-        "zh-cn": "修复W5612：为notify部分添加缺失的i18n键；添加prettier.config.mjs、tsconfig.json、@types/node、@tsconfig/node22；更新devDependencies"
       }
     },
     "titleLang": {

@@ -1,5 +1,11 @@
 # Older Changelog
 
+### 1.2.2
+- Fix W5612: add missing i18n keys for notify section (all 11 languages)
+- Add prettier.config.mjs, tsconfig.json, @types/node, @tsconfig/node22
+- Update devDependencies (eslint-config 2.3.4, release-script 5.2.1)
+- Fix jsdoc types in lib files
+
 ### 1.2.1
 - Fix E8915: add dependabot cooldown (7 days) to reduce supply chain risk
 - Fix deploy step: use Node.js 24 for trusted publishing compatibility

@@ -102,6 +102,9 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 
 ## Changelog
 
+### 1.2.9
+- Fix the "Test Connection" button: use the values currently entered in the admin form and show a proper success/error message
+
 ### 1.2.8
 - Add a link to the PWA remote control next to the instance in the admin Instances tab (localLinks)
 - Update @iobroker/testing to 6.2.2 and @types/node to 22.20.4

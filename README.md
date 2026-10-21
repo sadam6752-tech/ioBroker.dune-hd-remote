@@ -102,6 +102,9 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 
 ## Changelog
 
+### 1.2.10
+- Fix the "Test Connection" button: enable messagebox, use the current form values (useNative) and the same status request as the polling
+
 ### 1.2.9
 - Fix the "Test Connection" button: use the values currently entered in the admin form and show a proper success/error message
 

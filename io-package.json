@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.9",
+    "version": "1.2.10",
     "news": {
+      "1.2.10": {
+        "en": "Fix: the \"Test Connection\" button in the admin now works (adapter receives messages from the admin, uses the current form values and the same status request as the polling).",
+        "de": "Fix: Der Button \"Verbindung testen\" in der Admin-Oberfläche funktioniert jetzt (Adapter empfängt Nachrichten vom Admin, nutzt die aktuellen Formularwerte und dieselbe Statusabfrage wie das Polling).",
+        "ru": "Исправление: кнопка «Проверить соединение» в админке теперь работает (адаптер получает сообщения от админки, использует текущие значения формы и тот же запрос статуса, что и опрос).",
+        "fr": "Correction : le bouton « Tester la connexion » de l'admin fonctionne maintenant (l'adaptateur reçoit les messages de l'admin, utilise les valeurs actuelles du formulaire et la même requête de statut que l'interrogation).",
+        "it": "Correzione: il pulsante \"Test connessione\" nell'admin ora funziona (l'adattatore riceve i messaggi dall'admin, usa i valori attuali del modulo e la stessa richiesta di stato del polling).",
+        "es": "Corrección: el botón \"Probar conexión\" del admin ahora funciona (el adaptador recibe mensajes del admin, usa los valores actuales del formulario y la misma solicitud de estado que el sondeo).",
+        "pl": "Poprawka: przycisk \"Testuj połączenie\" w panelu admin działa teraz (adapter odbiera wiadomości z admina, używa bieżących wartości formularza i tego samego zapytania o status co odpytywanie).",
+        "pt": "Correção: o botão \"Testar ligação\" no admin agora funciona (o adaptador recebe mensagens do admin, usa os valores atuais do formulário e o mesmo pedido de estado do polling).",
+        "nl": "Fix: de knop \"Verbinding testen\" in admin werkt nu (adapter ontvangt berichten van admin, gebruikt de huidige formulierwaarden en dezelfde statusaanvraag als de polling).",
+        "uk": "Виправлення: кнопка «Перевірити з'єднання» в адмінці тепер працює (адаптер отримує повідомлення від адмінки, використовує поточні значення форми та той самий запит статусу, що й опитування).",
+        "zh-cn": "修复：管理界面中的“测试连接”按钮现在可以正常工作（适配器可接收管理界面的消息，使用表单当前值以及与轮询相同的状态请求）。"
+      },
       "1.2.9": {
         "en": "Fix: the \"Test Connection\" button in the admin now uses the values currently entered in the form and shows a proper success or error message.",
         "de": "Fix: Der Button \"Verbindung testen\" in der Admin-Oberfläche verwendet jetzt die aktuell eingegebenen Formularwerte und zeigt eine korrekte Erfolgs- oder Fehlermeldung an.",
@@ -80,19 +93,6 @@
         "nl": "@iobroker/adapter-core bijgewerkt naar 3.4.3",
         "uk": "Оновлено @iobroker/adapter-core до 3.4.3",
         "zh-cn": "更新 @iobroker/adapter-core 至 3.4.3"
-      },
-      "1.2.3": {
-        "en": "Fix W0066: downgrade @types/node to >=22 <23; add extends to tsconfig.json; add 1.2.2 changelog to README",
-        "de": "@types/node auf >=22 <23 heruntergestuft; extends in tsconfig.json hinzugefügt; 1.2.2 Changelog in README ergänzt",
-        "ru": "Понижена версия @types/node до >=22 <23; добавлен extends в tsconfig.json; добавлен changelog 1.2.2 в README",
-        "fr": "Rétrogradation de @types/node à >=22 <23; extends ajouté dans tsconfig.json; changelog 1.2.2 ajouté au README",
-        "it": "@types/node declassato a >=22 <23; extends aggiunto in tsconfig.json; changelog 1.2.2 aggiunto al README",
-        "es": "@types/node degradado a >=22 <23; extends añadido en tsconfig.json; changelog 1.2.2 añadido al README",
-        "pl": "@types/node obniżono do >=22 <23; dodano extends w tsconfig.json; dodano changelog 1.2.2 do README",
-        "pt": "@types/node rebaixado para >=22 <23; extends adicionado em tsconfig.json; changelog 1.2.2 adicionado ao README",
-        "nl": "@types/node teruggebracht naar >=22 <23; extends toegevoegd in tsconfig.json; changelog 1.2.2 toegevoegd aan README",
-        "uk": "Знижено версію @types/node до >=22 <23; додано extends у tsconfig.json; додано changelog 1.2.2 до README",
-        "zh-cn": "将@types/node降级至>=22 <23；在tsconfig.json中添加extends；在README中添加1.2.2 changelog"
       }
     },
     "titleLang": {

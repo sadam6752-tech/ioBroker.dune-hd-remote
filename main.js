@@ -132,12 +132,33 @@ class DuneHdRemote extends utils.Adapter {
         if (!obj || obj.command !== 'testConnection') {
             return;
         }
-        if (!this.player) {
-            this.sendTo(obj.from, obj.command, { error: 'Player not initialized' }, obj.callback);
-            return;
+        try {
+            // Use the values currently entered in the admin form (may be unsaved), fall back to saved config
+            const msg = obj.message && typeof obj.message === 'object' ? obj.message : {};
+            const ip = String(msg.playerIP || this.config.playerIP || '').trim();
+            const port = Number(msg.playerPort || this.config.playerPort) || 80;
+            const timeout = Math.min(Number(msg.connectionTimeout || this.config.connectionTimeout) || 5000, 10000);
+            if (!ip) {
+                this.sendTo(obj.from, obj.command, { error: 'Player IP address is not configured' }, obj.callback);
+                return;
+            }
+            const player = new DunePlayer(ip, port, timeout);
+            const result = await player.testConnection();
+            if (result.success) {
+                const s = result.status || {};
+                const info = s.firmware_version ? ` (firmware ${s.firmware_version})` : '';
+                this.sendTo(obj.from, obj.command, { result: `Connected to ${ip}:${port}${info}` }, obj.callback);
+            } else {
+                this.sendTo(
+                    obj.from,
+                    obj.command,
+                    { error: `Player not reachable at ${ip}:${port}${result.error ? `: ${result.error}` : ''}` },
+                    obj.callback,
+                );
+            }
+        } catch (err) {
+            this.sendTo(obj.from, obj.command, { error: err.message }, obj.callback);
         }
-        const result = await this.player.testConnection();
-        this.sendTo(obj.from, obj.command, result, obj.callback);
     }
 
     // ── Control handler ──────────────────────────────────────────────────────

@@ -166,6 +166,7 @@
     "compact": true,
     "connectionType": "local",
     "dataSource": "poll",
+    "messagebox": true,
     "adminUI": {
       "config": "json"
     },

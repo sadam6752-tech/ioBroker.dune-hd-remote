@@ -107,11 +107,7 @@
       "type": "sendTo",
       "label": "Test Connection",
       "command": "testConnection",
-      "data": {
-        "playerIP": "${data.playerIP}",
-        "playerPort": "${data.playerPort}",
-        "connectionTimeout": "${data.connectionTimeout}"
-      },
+      "useNative": true,
       "variant": "contained",
       "color": "primary",
       "xs": 12, "sm": 4, "md": 3, "lg": 2, "xl": 2

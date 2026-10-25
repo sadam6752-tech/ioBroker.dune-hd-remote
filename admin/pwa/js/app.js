@@ -88,7 +88,34 @@ const IR = {
     B: 'E01FBF00',
     C: 'FF00BF00',
     D: 'BE41BF00',
+    // Transport keys
+    PLAY:  'B748BF00',
+    PAUSE: 'E11EBF00',
+    STOP:  'E619BF00',
+    PREV:  'B649BF00',
+    NEXT:  'E21DBF00',
+    SLOW:  'E51ABF00',
+    REW:   'E31CBF00',
+    FWD:   'E41BBF00',
 };
+
+// Transport buttons: inside the Dune player the native API commands are used. While an Android app
+// has the focus (status android_app_active=1) those commands do not reach the app, so the remote's
+// transport keys are sent as IR codes instead (Android turns them into MEDIA_* key events).
+async function transport(irKey, nativeCmd, nativeParams) {
+    let androidApp = false;
+    try {
+        const status = await API.send('status');
+        androidApp = String(status.android_app_active) === '1';
+    } catch (e) {
+        toast(e.message, true);
+        return;
+    }
+    if (androidApp) {
+        return ir(IR[irKey]);
+    }
+    return cmd(nativeCmd, nativeParams);
+}
 
 // Button wiring
 function wire(id, action) {
@@ -118,16 +145,16 @@ function initButtons() {
     wireIR('btn-topmenu', 'TOP_MENU');
 
     // Playback row 1
-    wire('btn-play',  () => cmd('set_playback_state', { speed: 256 }));
-    wire('btn-pause', () => cmd('set_playback_state', { speed: 0 }));
-    wire('btn-prev',  () => cmd('playback_action', { action: 'prev' }));
-    wire('btn-next',  () => cmd('playback_action', { action: 'next' }));
+    wire('btn-play',  () => transport('PLAY',  'set_playback_state', { speed: 256 }));
+    wire('btn-pause', () => transport('PAUSE', 'set_playback_state', { speed: 0 }));
+    wire('btn-prev',  () => transport('PREV',  'playback_action', { action: 'prev' }));
+    wire('btn-next',  () => transport('NEXT',  'playback_action', { action: 'next' }));
 
     // Playback row 2
-    wire('btn-stop', () => cmd('playback_action', { action: 'stop' }));
-    wire('btn-slow', () => cmd('set_playback_state', { speed: 64 }));
-    wire('btn-rew',  () => cmd('set_playback_state', { speed: -512 }));
-    wire('btn-ff',   () => cmd('set_playback_state', { speed: 512 }));
+    wire('btn-stop', () => transport('STOP', 'playback_action', { action: 'stop' }));
+    wire('btn-slow', () => transport('SLOW', 'set_playback_state', { speed: 64 }));
+    wire('btn-rew',  () => transport('REW',  'set_playback_state', { speed: -512 }));
+    wire('btn-ff',   () => transport('FWD',  'set_playback_state', { speed: 512 }));
 
     // Volume / Mute / Audio
     wireIR('btn-vol-up',   'V_UP');

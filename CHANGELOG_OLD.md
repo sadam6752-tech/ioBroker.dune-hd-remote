@@ -1,5 +1,10 @@
 # Older Changelog
 
+### 1.2.7
+- Fix E6029/W6030: add the missing changelog entry for 1.2.6
+- Fix W6034: complete MIT license text in the README
+- CI: Node.js 26 in the test matrix and a new deploy job using npm Trusted Publishing (OIDC) with provenance
+
 ### 1.2.6
 - Fix W0066: pin @types/node to >=22 <23 (was ^26)
 - Update @alcalzone/release-script-plugin-license to 5.2.2 (S0064)

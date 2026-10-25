@@ -112,6 +112,9 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 
 ## Changelog
 
+### 1.2.12
+- Fix Play, Pause, Stop, Previous, Next, Rewind and Fast-forward in Android apps: the PWA remote and the control states send the remote's transport keys (IR codes, delivered to Android as media keys) while an Android app is in the foreground; inside the Dune player the API commands are still used
+
 ### 1.2.11
 - Fix a crash of the adapter when the player did not answer a PWA request in time (the timeout answered the request twice)
 - Replace the deprecated `url.parse()` in the PWA server by the WHATWG `URL` API
@@ -128,11 +131,6 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 ### 1.2.8
 - Add a link to the PWA remote control next to the instance in the admin Instances tab (localLinks)
 - Update @iobroker/testing to 6.2.2 and @types/node to 22.20.4
-
-### 1.2.7
-- Fix E6029/W6030: add the missing changelog entry for 1.2.6
-- Fix W6034: complete MIT license text in the README
-- CI: Node.js 26 in the test matrix and a new deploy job using npm Trusted Publishing (OIDC) with provenance
 
 For older changelog entries see [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 

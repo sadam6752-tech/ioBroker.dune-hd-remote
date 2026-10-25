@@ -196,12 +196,12 @@ class DuneHdRemote extends utils.Adapter {
                 break;
             case 'prev':
                 if (value) {
-                    await this.player.playbackAction('prev');
+                    await this.player.prev();
                 }
                 break;
             case 'next':
                 if (value) {
-                    await this.player.playbackAction('next');
+                    await this.player.next();
                 }
                 break;
             case 'rewind':

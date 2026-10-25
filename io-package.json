@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.12",
+    "version": "1.2.13",
     "news": {
+      "1.2.13": {
+        "en": "Documentation: README now explains the notes for Android models, including that the Power button cannot switch Google-certified ATV boxes to standby (Android restriction, not an adapter error).",
+        "de": "Dokumentation: Das README erklärt jetzt die Hinweise zu Android-Modellen, darunter dass die Power-Taste Google-zertifizierte ATV-Boxen nicht in den Standby schalten kann (Android-Einschränkung, kein Adapterfehler).",
+        "ru": "Документация: README теперь описывает особенности Android-моделей, в том числе то, что кнопка Power не может перевести Google-сертифицированные ATV-приставки в режим ожидания (ограничение Android, а не ошибка адаптера).",
+        "fr": "Documentation : le README explique désormais les remarques pour les modèles Android, notamment que le bouton Power ne peut pas mettre les boîtiers ATV certifiés Google en veille (restriction d'Android, pas une erreur de l'adaptateur).",
+        "it": "Documentazione: il README ora spiega le note per i modelli Android, incluso il fatto che il pulsante Power non può mettere in standby i box ATV certificati Google (limitazione di Android, non un errore dell'adattatore).",
+        "es": "Documentación: el README ahora explica las notas para modelos Android, incluido que el botón Power no puede poner en espera las cajas ATV certificadas por Google (restricción de Android, no un error del adaptador).",
+        "pl": "Dokumentacja: README wyjaśnia teraz uwagi dotyczące modeli Android, w tym że przycisk Power nie może przełączyć w tryb gotowości przystawek ATV z certyfikatem Google (ograniczenie Androida, a nie błąd adaptera).",
+        "pt": "Documentação: o README explica agora as notas para modelos Android, incluindo que o botão Power não consegue colocar em espera as caixas ATV certificadas pela Google (restrição do Android, não um erro do adaptador).",
+        "nl": "Documentatie: de README legt nu de opmerkingen voor Android-modellen uit, waaronder dat de Power-knop Google-gecertificeerde ATV-boxen niet in stand-by kan zetten (Android-beperking, geen adapterfout).",
+        "uk": "Документація: README тепер пояснює особливості Android-моделей, зокрема те, що кнопка Power не може перевести сертифіковані Google ATV-приставки в режим очікування (обмеження Android, а не помилка адаптера).",
+        "zh-cn": "文档：README 现已说明 Android 型号的注意事项，包括 Power 按钮无法让通过 Google 认证的 ATV 盒子进入待机（这是 Android 的限制，而非适配器错误）。"
+      },
       "1.2.12": {
         "en": "Fix: Play, Pause, Stop, Previous, Next, Rewind and Fast-forward of the PWA remote (and of the control states) now work inside Android apps on the player. They are sent as remote control keys while an Android app is in the foreground.",
         "de": "Fix: Play, Pause, Stop, Zurück, Weiter, Rücklauf und Vorlauf der PWA-Fernbedienung (und der Steuer-States) funktionieren jetzt auch in Android-Apps auf dem Player. Sie werden als Fernbedienungstasten gesendet, solange eine Android-App im Vordergrund ist.",
@@ -80,19 +93,6 @@
         "nl": "Repository-checker-correcties: ontbrekende changelog-regel voor 1.2.6 toegevoegd in de README, volledige MIT-licentietekst in de README en een geldige copyrightregel in het LICENSE-bestand. CI: nieuwe deploy-job met npm Trusted Publishing (OIDC) en provenance - releases worden nu automatisch gepubliceerd. @iobroker/testing 6.2.x.",
         "uk": "Виправлення repository checker: додано відсутній запис журналу змін для 1.2.6 у README, повний текст ліцензії MIT у README та коректний рядок копірайту у файлі LICENSE. CI: додано job deploy із npm Trusted Publishing (OIDC) і provenance - релізи тепер публікуються автоматично. @iobroker/testing 6.2.x.",
         "zh-cn": "仓库检查修复：在 README 中补充了 1.2.6 缺失的变更日志条目，加入完整的 MIT 许可证文本，并在 LICENSE 文件中添加有效的版权行。CI：新增使用 npm Trusted Publishing (OIDC) 的 deploy 作业（含 provenance），此后版本将自动发布。@iobroker/testing 6.2.x。"
-      },
-      "1.2.6": {
-        "en": "Fix W0066: pin @types/node to >=22 <23 (was ^26); update @alcalzone/release-script-plugin-license to 5.2.2 (S0064)",
-        "de": "W0066 behoben: @types/node auf >=22 <23 festgelegt (war ^26); @alcalzone/release-script-plugin-license auf 5.2.2 aktualisiert (S0064)",
-        "ru": "Исправление W0066: @types/node зафиксирован на >=22 <23 (было ^26); @alcalzone/release-script-plugin-license обновлён до 5.2.2 (S0064)",
-        "fr": "Correction W0066: @types/node fixé à >=22 <23 (était ^26); @alcalzone/release-script-plugin-license mis à jour vers 5.2.2 (S0064)",
-        "it": "Fix W0066: @types/node fissato a >=22 <23 (era ^26); @alcalzone/release-script-plugin-license aggiornato a 5.2.2 (S0064)",
-        "es": "Fix W0066: @types/node fijado a >=22 <23 (era ^26); @alcalzone/release-script-plugin-license actualizado a 5.2.2 (S0064)",
-        "pl": "Naprawa W0066: @types/node ustawiono na >=22 <23 (było ^26); @alcalzone/release-script-plugin-license zaktualizowano do 5.2.2 (S0064)",
-        "pt": "Fix W0066: @types/node fixado em >=22 <23 (era ^26); @alcalzone/release-script-plugin-license atualizado para 5.2.2 (S0064)",
-        "nl": "Fix W0066: @types/node vastgezet op >=22 <23 (was ^26); @alcalzone/release-script-plugin-license bijgewerkt naar 5.2.2 (S0064)",
-        "uk": "Виправлення W0066: @types/node зафіксовано на >=22 <23 (було ^26); @alcalzone/release-script-plugin-license оновлено до 5.2.2 (S0064)",
-        "zh-cn": "修复W0066：将@types/node固定为>=22 <23（原为^26）；将@alcalzone/release-script-plugin-license更新至5.2.2（S0064）"
       }
     },
     "titleLang": {

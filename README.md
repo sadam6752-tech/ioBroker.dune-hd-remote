@@ -39,7 +39,7 @@ Tested on: **Dune HD Pro 4K** (firmware with XML response format).
 ### Notes for Android models
 
 - **Android apps:** While an Android app is in the foreground, the transport buttons (play, pause, stop, previous, next, rewind, fast-forward) are sent as remote control keys instead of API commands, because the API commands only reach the Dune player itself. Inside the Dune player nothing changes. The "slow" button has no Android key and does nothing in Android apps.
-- **Power / standby on Google-certified ATV boxes:** The Power button (`control.power`, PWA) does **not** work on third-party Google-certified ATV boxes running the Dune Media Center app (for example Android 14 boxes with port 11080). The player accepts the command, but Android refuses to put the box to sleep because the app does not have the system permission `android.permission.DEVICE_POWER`. This permission cannot be granted to ordinary apps, so neither the adapter nor the PWA can work around it. Use the box's own remote to switch it off. The Power button works on Dune HD players with the Linux-based firmware.
+- **Power / standby on Google-certified ATV boxes (known limitation):** On third-party Google-certified ATV boxes that run the Dune Media Center app (for example Android 14 boxes, port 11080) the Power button (`control.power` and the PWA) cannot switch the box to standby. The box accepts the command and the adapter reports no error, but Android refuses to put the box to sleep, because the Dune app does not have the system permission `android.permission.DEVICE_POWER`. Only system apps can get this permission, so there is no setting, adapter option or workaround for it. Switch such a box off with its own remote. All other buttons work normally. On Dune HD players with the Linux-based firmware the Power button works.
 
 ## Configuration
 
@@ -107,6 +107,7 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 | `status.videoWidth/Height` | number | Video resolution |
 | `status.bitrate` | number | Current bitrate (bit/s) |
 | `control.play/pause/stop` | boolean | Trigger playback actions |
+| `control.power` | boolean | Power / standby (not supported on Google-certified ATV boxes, see Notes for Android models) |
 | `control.volume` | number | Set volume |
 | `navigation.up/down/left/right/ok/back` | boolean | Navigation buttons |
 | `media.playUrl` | string | Play media from URL |
@@ -116,6 +117,9 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 | `notify.lastResult` | string | Result of last notification request |
 
 ## Changelog
+
+### 1.2.13
+- README: notes for Android models; the Power button cannot switch Google-certified ATV boxes to standby (Android restriction), `control.power` added to the states table
 
 ### 1.2.12
 - Fix Play, Pause, Stop, Previous, Next, Rewind and Fast-forward in Android apps: the PWA remote and the control states send the remote's transport keys (IR codes, delivered to Android as media keys) while an Android app is in the foreground; inside the Dune player the API commands are still used
@@ -132,10 +136,6 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 
 ### 1.2.9
 - Fix the "Test Connection" button: use the values currently entered in the admin form and show a proper success/error message
-
-### 1.2.8
-- Add a link to the PWA remote control next to the instance in the admin Instances tab (localLinks)
-- Update @iobroker/testing to 6.2.2 and @types/node to 22.20.4
 
 For older changelog entries see [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 

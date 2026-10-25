@@ -36,6 +36,11 @@ Tested on: **Dune HD Pro 4K** (firmware with XML response format).
 | Linux-based (Pro 4K, Solo 4K, etc.) | 80 |
 | Android/ATV-based | 11080 |
 
+### Notes for Android models
+
+- **Android apps:** While an Android app is in the foreground, the transport buttons (play, pause, stop, previous, next, rewind, fast-forward) are sent as remote control keys instead of API commands, because the API commands only reach the Dune player itself. Inside the Dune player nothing changes. The "slow" button has no Android key and does nothing in Android apps.
+- **Power / standby on Google-certified ATV boxes:** The Power button (`control.power`, PWA) does **not** work on third-party Google-certified ATV boxes running the Dune Media Center app (for example Android 14 boxes with port 11080). The player accepts the command, but Android refuses to put the box to sleep because the app does not have the system permission `android.permission.DEVICE_POWER`. This permission cannot be granted to ordinary apps, so neither the adapter nor the PWA can work around it. Use the box's own remote to switch it off. The Power button works on Dune HD players with the Linux-based firmware.
+
 ## Configuration
 
 ### Player

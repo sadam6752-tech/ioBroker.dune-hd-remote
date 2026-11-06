@@ -3,6 +3,7 @@
 const utils = require('@iobroker/adapter-core');
 const DunePlayer = require('./lib/dune-player');
 const PwaServer = require('./lib/pwa-server');
+const { checkTcpPort, registerTcpPort } = require('./lib/used-resources');
 const DuneNotify = require('./lib/dune-notify');
 
 class DuneHdRemote extends utils.Adapter {
@@ -63,8 +64,10 @@ class DuneHdRemote extends utils.Adapter {
                 bindIp,
                 log: (level, msg) => this.log[level](msg),
             });
+            await checkTcpPort(this, pwaPort, bindIp, 'PWA server');
             try {
                 const displayHost = await this._pwaServer.start();
+                await registerTcpPort(this, pwaPort, bindIp);
                 const pwaUrl = `http://${displayHost}:${pwaPort}/`;
                 await this.setStateAsync('info.pwaUrl', { val: pwaUrl, ack: true });
                 this.log.info(`PWA remote available at: http://<iobroker-host>:${pwaPort}/`);

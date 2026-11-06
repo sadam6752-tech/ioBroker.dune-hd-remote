@@ -180,7 +180,8 @@
         "admin": ">=7.6.20"
       }
     ],
-    "tier": 3
+    "tier": 3,
+    "declareUsedResources": true
   },
   "native": {
     "playerName": "Dune HD",

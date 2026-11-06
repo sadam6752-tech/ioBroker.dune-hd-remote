@@ -119,7 +119,7 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 
 ## Changelog
 
-### **WORK IN PROGRESS**
+### 1.2.14
 - The port of the PWA remote is declared in the used resources registry of js-controller (js-controller 8 and newer), and a warning is logged when another instance already uses it; nothing changes on older controllers
 
 ### 1.2.13
@@ -137,9 +137,6 @@ Requires the **dune-notify** PHP plugin installed on the player (see `dune-notif
 
 ### 1.2.10
 - Fix the "Test Connection" button: enable messagebox, use the current form values (useNative) and the same status request as the polling
-
-### 1.2.9
-- Fix the "Test Connection" button: use the values currently entered in the admin form and show a proper success/error message
 
 For older changelog entries see [CHANGELOG_OLD.md](CHANGELOG_OLD.md).
 

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "dune-hd-remote",
-    "version": "1.2.13",
+    "version": "1.2.14",
     "news": {
+      "1.2.14": {
+        "en": "The port of the PWA remote is declared in the used resources registry of js-controller 8, and a warning is logged when another instance already uses it. Nothing changes on older js-controller versions.",
+        "de": "Der Port der PWA-Fernbedienung wird im Register der belegten Ressourcen von js-controller 8 eingetragen, und es wird eine Warnung protokolliert, wenn eine andere Instanz ihn bereits verwendet. Mit älteren js-controller-Versionen ändert sich nichts.",
+        "ru": "Порт PWA-пульта регистрируется в реестре занятых ресурсов js-controller 8, а если его уже использует другой экземпляр, в лог пишется предупреждение. На более старых версиях js-controller ничего не меняется.",
+        "fr": "Le port de la télécommande PWA est déclaré dans le registre des ressources utilisées de js-controller 8, et un avertissement est journalisé lorsqu'une autre instance l'utilise déjà. Rien ne change avec les versions plus anciennes de js-controller.",
+        "it": "La porta del telecomando PWA viene dichiarata nel registro delle risorse utilizzate di js-controller 8 e viene registrato un avviso quando un'altra istanza la sta già usando. Con le versioni precedenti di js-controller non cambia nulla.",
+        "es": "El puerto del mando PWA se declara en el registro de recursos utilizados de js-controller 8, y se registra una advertencia cuando otra instancia ya lo usa. Con versiones anteriores de js-controller no cambia nada.",
+        "pl": "Port pilota PWA jest zgłaszany w rejestrze używanych zasobów js-controller 8, a gdy inna instancja już go używa, w logu pojawia się ostrzeżenie. W starszych wersjach js-controller nic się nie zmienia.",
+        "pt": "A porta do controlo remoto PWA é declarada no registo de recursos utilizados do js-controller 8, e é registado um aviso quando outra instância já a utiliza. Nas versões mais antigas do js-controller nada muda.",
+        "nl": "De poort van de PWA-afstandsbediening wordt aangemeld in het register van gebruikte resources van js-controller 8, en er wordt een waarschuwing gelogd als een andere instantie hem al gebruikt. Met oudere js-controller-versies verandert er niets.",
+        "uk": "Порт PWA-пульта реєструється в реєстрі зайнятих ресурсів js-controller 8, а якщо його вже використовує інший екземпляр, у лог записується попередження. На старіших версіях js-controller нічого не змінюється.",
+        "zh-cn": "PWA 遥控器的端口会登记到 js-controller 8 的已用资源注册表中，如果其他实例已占用该端口，会在日志中记录警告。在较旧的 js-controller 版本上没有任何变化。"
+      },
       "1.2.13": {
         "en": "Documentation: README now explains the notes for Android models, including that the Power button cannot switch Google-certified ATV boxes to standby (Android restriction, not an adapter error).",
         "de": "Dokumentation: Das README erklärt jetzt die Hinweise zu Android-Modellen, darunter dass die Power-Taste Google-zertifizierte ATV-Boxen nicht in den Standby schalten kann (Android-Einschränkung, kein Adapterfehler).",
@@ -80,19 +93,6 @@
         "nl": "Nieuw: link naar de PWA-afstandsbediening naast de instantie op het tabblad Instanties in admin.",
         "uk": "Нове: посилання на PWA-пульт поруч з інстансом на вкладці «Екземпляри» в адмінці.",
         "zh-cn": "新增：在管理界面“实例”选项卡中实例旁边添加 PWA 遥控器链接。"
-      },
-      "1.2.7": {
-        "en": "Repository checker fixes: added the missing README changelog entry for 1.2.6, the complete MIT license text in the README and a valid copyright line in the LICENSE file. CI: new deploy job using npm Trusted Publishing (OIDC) with provenance - releases are published automatically from now on. @iobroker/testing 6.2.x.",
-        "de": "Repository-Checker-Korrekturen: fehlender README-Changelog-Eintrag fuer 1.2.6 ergaenzt, vollstaendiger MIT-Lizenztext im README und gueltige Copyright-Zeile in der LICENSE-Datei. CI: neuer Deploy-Job mit npm Trusted Publishing (OIDC) samt Provenance - Releases werden ab jetzt automatisch veroeffentlicht. @iobroker/testing 6.2.x.",
-        "ru": "Исправления по repository checker: добавлена отсутствующая запись чейнджлога README для 1.2.6, полный текст лицензии MIT в README и корректная строка копирайта в файле LICENSE. CI: добавлен job deploy с npm Trusted Publishing (OIDC) и provenance - релизы теперь публикуются автоматически. @iobroker/testing 6.2.x.",
-        "fr": "Corrections du repository checker : entree de changelog manquante pour 1.2.6 ajoutee dans le README, texte complet de la licence MIT dans le README et ligne de copyright valide dans le fichier LICENSE. CI : job deploy avec npm Trusted Publishing (OIDC) et provenance ajoute - les versions sont desormais publiees automatiquement. @iobroker/testing 6.2.x.",
-        "it": "Correzioni del repository checker: aggiunta la voce di changelog mancante per 1.2.6 nel README, testo completo della licenza MIT nel README e riga di copyright valida nel file LICENSE. CI: aggiunto job deploy con npm Trusted Publishing (OIDC) e provenance - le release vengono ora pubblicate automaticamente. @iobroker/testing 6.2.x.",
-        "es": "Correcciones del repository checker: anadida la entrada de changelog que faltaba para 1.2.6 en el README, texto completo de la licencia MIT en el README y linea de copyright valida en el archivo LICENSE. CI: anadido job deploy con npm Trusted Publishing (OIDC) y provenance - las versiones ahora se publican automaticamente. @iobroker/testing 6.2.x.",
-        "pl": "Poprawki repository checkera: dodano brakujacy wpis changeloga dla 1.2.6 w README, pelny tekst licencji MIT w README i poprawna linie praw autorskich w pliku LICENSE. CI: dodano job deploy z npm Trusted Publishing (OIDC) i provenance - wersje sa teraz publikowane automatycznie. @iobroker/testing 6.2.x.",
-        "pt": "Correcoes do repository checker: adicionada a entrada de changelog em falta para 1.2.6 no README, texto completo da licenca MIT no README e linha de copyright valida no ficheiro LICENSE. CI: adicionado job deploy com npm Trusted Publishing (OIDC) e provenance - as versoes passam a ser publicadas automaticamente. @iobroker/testing 6.2.x.",
-        "nl": "Repository-checker-correcties: ontbrekende changelog-regel voor 1.2.6 toegevoegd in de README, volledige MIT-licentietekst in de README en een geldige copyrightregel in het LICENSE-bestand. CI: nieuwe deploy-job met npm Trusted Publishing (OIDC) en provenance - releases worden nu automatisch gepubliceerd. @iobroker/testing 6.2.x.",
-        "uk": "Виправлення repository checker: додано відсутній запис журналу змін для 1.2.6 у README, повний текст ліцензії MIT у README та коректний рядок копірайту у файлі LICENSE. CI: додано job deploy із npm Trusted Publishing (OIDC) і provenance - релізи тепер публікуються автоматично. @iobroker/testing 6.2.x.",
-        "zh-cn": "仓库检查修复：在 README 中补充了 1.2.6 缺失的变更日志条目，加入完整的 MIT 许可证文本，并在 LICENSE 文件中添加有效的版权行。CI：新增使用 npm Trusted Publishing (OIDC) 的 deploy 作业（含 provenance），此后版本将自动发布。@iobroker/testing 6.2.x。"
       }
     },
     "titleLang": {
